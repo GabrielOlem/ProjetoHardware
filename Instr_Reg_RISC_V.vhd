@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
--- Title		: Registrador de Intruções
+-- Title		: Registrador de Intruï¿½ï¿½es
 -- Project		: CPU multi-ciclo
 --------------------------------------------------------------------------------
 -- File			: instr_reg.vhd
@@ -15,8 +15,8 @@
 -- Targets		: 
 -- Dependency	: 
 --------------------------------------------------------------------------------
--- Description	: Entidade que registra a instrução a ser executada, modulando 
--- corretamente a saída de acordo com o layout padrão das intruções do Mips.
+-- Description	: Entidade que registra a instruï¿½ï¿½o a ser executada, modulando 
+-- corretamente a saï¿½da de acordo com o layout padrï¿½o das intruï¿½ï¿½es do Mips.
 --------------------------------------------------------------------------------
 -- Copyright (c) notice
 --		Universidade Federal de Pernambuco (UFPE).
@@ -29,8 +29,8 @@
 -- Revision Number	: 
 -- Version			: 
 -- Date				: 29/07/2008 
--- Modifier			: João Paulo Fernandes Barbosa (jpfb@cin.ufpe.br)
--- Description		: Os sinais de entrada e saída e internos passam a ser do 
+-- Modifier			: Joï¿½o Paulo Fernandes Barbosa (jpfb@cin.ufpe.br)
+-- Description		: Os sinais de entrada e saï¿½da e internos passam a ser do 
 -- tipo std_logic. 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -39,7 +39,7 @@
 -- Version			: 
 -- Date				: 03/10/2018 
 -- Modifier			: Lucas Eliseu de Amorim (jpfb@cin.ufpe.br)
--- Description		: Mudança para o RISC-V
+-- Description		: Mudanï¿½a para o RISC-V
 --------------------------------------------------------------------------------
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
@@ -50,13 +50,13 @@ ENTITY Instr_Reg_RISC_V IS
 	PORT( 
 		Clk			: IN  STD_LOGIC;					 -- Clock do sistema
 		Reset		: IN  STD_LOGIC;					 -- Reset
-		Load_ir		: IN  STD_LOGIC;					 -- Bit para ativar carga do registrador de intruções
-		Entrada		: IN  STD_LOGIC_VECTOR(31 DOWNTO 0); -- Intrução a ser carregada
-		Instr19_15	: OUT STD_LOGIC_VECTOR(4 DOWNTO 0);	 -- Bits 19 a 15 da instrução referente ao rs1
-		Instr24_20	: OUT STD_LOGIC_VECTOR(4 DOWNTO 0);	 -- Bits 24 a 20 da instrução referente ao rs2
-		Instr11_7	: OUT STD_LOGIC_VECTOR(4 DOWNTO 0);  -- Bits 11 a 7 da instrução referente ao rd
-		Instr6_0	: OUT STD_LOGIC_VECTOR(6 DOWNTO 0);  -- Bits 6 a 0 referente ao opcode da instrução 
-		Instr31_0	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)  -- Sai toda a instrução para ser usada nos casos do immediate e para pegar o funct7
+		Load_ir		: IN  STD_LOGIC;					 -- Bit para ativar carga do registrador de intruï¿½ï¿½es
+		Entrada		: IN  STD_LOGIC_VECTOR(31 DOWNTO 0); -- Intruï¿½ï¿½o a ser carregada
+		Instr19_15	: OUT STD_LOGIC_VECTOR(4 DOWNTO 0);	 -- Bits 19 a 15 da instruï¿½ï¿½o referente ao rs1
+		Instr24_20	: OUT STD_LOGIC_VECTOR(4 DOWNTO 0);	 -- Bits 24 a 20 da instruï¿½ï¿½o referente ao rs2
+		Instr11_7	: OUT STD_LOGIC_VECTOR(4 DOWNTO 0);  -- Bits 11 a 7 da instruï¿½ï¿½o referente ao rd
+		Instr6_0	: OUT STD_LOGIC_VECTOR(6 DOWNTO 0);  -- Bits 6 a 0 referente ao opcode da instruï¿½ï¿½o 
+		Instr31_0	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)  -- Sai toda a instruï¿½ï¿½o para ser usada nos casos do immediate e para pegar o funct7
 		
 	);
 END Instr_Reg_RISC_V;
@@ -83,11 +83,11 @@ ARCHITECTURE behavioral_arch OF Instr_Reg_RISC_V IS
 			
 				IF( load_ir = '1' )THEN
 	
-					Instr19_15 <= entrada(19 DOWNTO 15); -- Modula instrução (19 a 15)  
-					Instr24_20 <= entrada(24 DOWNTO 20); -- Modula instrução (24 a 20)  
-					Instr11_7  <= entrada(11 DOWNTO 7);  -- Modula instrução (11 a 7)
-					Instr6_0  <= entrada(6 DOWNTO 0);  -- Modula instrução (6 a 0)
-					Instr31_0  <= entrada(31 DOWNTO 0);  -- Modula instrução (31 a 0)  
+					Instr19_15 <= entrada(19 DOWNTO 15); -- Modula instruï¿½ï¿½o (19 a 15)  
+					Instr24_20 <= entrada(24 DOWNTO 20); -- Modula instruï¿½ï¿½o (24 a 20)  
+					Instr11_7  <= entrada(11 DOWNTO 7);  -- Modula instruï¿½ï¿½o (11 a 7)
+					Instr6_0  <= entrada(6 DOWNTO 0);  -- Modula instruï¿½ï¿½o (6 a 0)
+					Instr31_0  <= entrada(31 DOWNTO 0);  -- Modula instruï¿½ï¿½o (31 a 0)  
 				
 				END IF;
 			

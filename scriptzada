@@ -11,10 +11,5 @@ add wave -position end  sim:/teste/clk
 add wave -position end  sim:/teste/reset
 add wave -position end  -radix decimal sim:/teste/pcOut
 add wave -position end  sim:/teste/pczinho/q
-add wave -position end  sim:/teste/pczinho/registradorA
-add wave -position end  sim:/teste/pczinho/registradorB
-add wave -position end  sim:/teste/pczinho/saida1
-add wave -position end  sim:/teste/pczinho/saida2
-add wave -position end  sim:/teste/pczinho/saida3
 
 run 10 us
