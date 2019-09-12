@@ -1,0 +1,109 @@
+C:/Users/gme/Desktop/Segundaentrega/ramOnChip64.v {1 {vlog -work work -stats=none C:/Users/gme/Desktop/Segundaentrega/ramOnChip64.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module ramOnChip64
+
+Top level modules:
+	ramOnChip64
+
+} {} {}} C:/Users/gme/Desktop/ProjetoHardwarea/teste.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardwarea/teste.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module teste
+
+Top level modules:
+	teste
+
+} {} {}} C:/Users/gme/Desktop/ProjetoHardwarea/ula64.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/gme/Desktop/ProjetoHardwarea/ula64.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity Ula64
+-- Compiling architecture behavioral of Ula64
+
+} {} {}} C:/Users/gme/Desktop/Segundaentrega/mux.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/Segundaentrega/mux.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} C:/Users/gme/Desktop/ProjetoHardwarea/Memoria32.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardwarea/Memoria32.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Memoria32
+
+Top level modules:
+	Memoria32
+
+} {} {}} C:/Users/gme/Desktop/Segundaentrega/mux4.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/Segundaentrega/mux4.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} C:/Users/gme/Desktop/ProjetoHardwarea/control.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardwarea/control.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} C:/Users/gme/Desktop/Segundaentrega/extensor.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/Segundaentrega/extensor.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module extensor
+
+Top level modules:
+	extensor
+
+} {} {}} C:/Users/gme/Desktop/PRojetoHardwarea/ramOnChip32.v {1 {vlog -work work -stats=none C:/Users/gme/Desktop/ProjetoHardwarea/ramOnChip32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module ramOnChip32
+
+Top level modules:
+	ramOnChip32
+
+} {} {}} C:/Users/gme/Desktop/PRojetoHardwarea/Instr_Reg_RISC_V.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\gme\Desktop\ProjetoHardwarea\Instr_Reg_RISC_V.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Instr_Reg_RISC_V
+-- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
+
+} {} {}} C:/Users/gme/Desktop/Segundaentrega/testaextensor.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/Segundaentrega/testaextensor.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module testaextensor
+
+Top level modules:
+	testaextensor
+
+} {} {}} C:/Users/gme/Desktop/Segundaentrega/bancoReg.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/Segundaentrega/bancoReg.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module bancoReg
+
+Top level modules:
+	bancoReg
+
+} {} {}} C:/Users/gme/Desktop/PRojetoHardwarea/register.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardwarea/register.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} C:/Users/gme/Desktop/Segundaentrega/Memoria64.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/Segundaentrega/Memoria64.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Memoria64
+
+Top level modules:
+	Memoria64
+
+} {} {}} C:/Users/gme/Desktop/Segundaentrega/Deslocamento.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/Segundaentrega/Deslocamento.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Deslocamento
+
+Top level modules:
+	Deslocamento
+
+} {} {}}

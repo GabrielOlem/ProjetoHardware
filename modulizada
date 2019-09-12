@@ -1,0 +1,9 @@
+ramOnChip64.v
+Memoria64.sv
+Memoria32.sv
+ramOnChip32.v
+bancoReg.sv
+cpu.sv
+teste.sv
+control.sv
+register.sv
