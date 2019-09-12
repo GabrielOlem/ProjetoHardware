@@ -1,10 +1,16 @@
-module mux4(output logic f, input logic a, b, c, d, [1:0] sel);
-	not not1(n_sel1, sel[1]), not2(n_sel0, sel[0]);
-	
-	and and1(f1, a, n_sel0, n_sel1),
-	    and2(f2, b, sel[0], n_sel1),
-	    and3(f3, c, sel[1], n_sel0),
-	    and4(f4, d, sel[1], sel[0]);
-	or or4(f, f1, f2, f3, f4);
-
+module mux4(output logic [63:0]f, input logic [63:0]a, [63:0]b, [63:0]c, [63:0]d, [1:0] sel);
+	always_comb begin
+		if(sel == 2'b00)begin
+			f = a;
+		end
+		if(sel == 2'b01)begin
+			f = b;
+		end
+		if(sel == 2'b10)begin
+			f = c;
+		end
+		if(sel == 2'b11)begin
+			f = d;
+		end
+	end
 endmodule
