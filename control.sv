@@ -52,27 +52,32 @@ module control (
 			ALUOp = 3'd1;
 			AluOutWrite = 1;
 			next_state = 1;
-			if(Instruction[6:0] == 7'b0010011) begin
+			if(Instruction[6:0] == 7'b0010011) begin //ADDI
 				if(Instruction[14:12] == 3'b000) begin
 					next_state = 3;
 				end
 			end
-			if(Instruction[6:0] == 7'b0110011) begin
+			if(Instruction[6:0] == 7'b0110011) begin //ADD
 				if(Instruction[31:25] == 7'b0000000) begin
 					next_state = 4;
 				end
-				if(Instruction[31:25] == 7'b0100000) begin
+				if(Instruction[31:25] == 7'b0100000) begin //SUB
 					next_state = 5;
 				end
 			end
-			if(Instruction[6:0] == 7'b0000011) begin
+			if(Instruction[6:0] == 7'b0000011) begin //LD
 				if(Instruction[14:12] == 3'b011) begin
 					next_state = 6;
 				end
 			end
-			if(Instruction[6:0] == 7'b0100011) begin
+			if(Instruction[6:0] == 7'b0100011) begin //SD
 				if(Instruction[14:12] == 3'b111) begin	
 					next_state = 9;
+				end
+			end
+			if(Instruction[6:0] == 7'b1100011) begin //BEQ
+				if(Instruction[14:12] == 3'b000) begin
+					next_state = 11;
 				end
 			end
 		end
@@ -149,18 +154,24 @@ module control (
 		end
 		if(state == 9) begin //sd
 			extensorSignal = 1;
-			
+
 			MuxAlu1Sel = 1;
 			Mux4Sel = 2;
 			ALUOp = 1;
-
-			
 
 			next_state = 10;
 		end
 		if(state == 10) begin
 			DMemRead = 1;
 			call_state = 1;
+			next_state = 30;
+		end
+		if(state == 11) begin
+			MuxAlu1Sel = 1;
+			Mux4Sel = 0;
+			ALUOp = 3;
+			call_state = 1;
+
 			next_state = 30;
 		end
 
