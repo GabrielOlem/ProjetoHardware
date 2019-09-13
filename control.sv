@@ -10,11 +10,12 @@ module control (
 	output logic DMemRead, logic IMemRead, logic LoadMDR,
 	output logic [2:0]ALUOp, logic Load_ir,
 	output logic regWrite, logic regAWrite, logic regBWrite, 
-	output logic memtoReg, logic wrMem,
+	output logic memtoReg,
 	output logic AluOutWrite
 );
 	logic [4:0]state;
 	logic [4:0]next_state;
+	logic [4:0]call_state;
 	always_ff @(posedge clk, posedge reset)begin
 		if(reset)
 			state = 0;
@@ -24,6 +25,8 @@ module control (
 	always_comb begin
 		if(state == 0) begin //Faz nada
 			pcWrite = 0;
+			pcSource = 0;
+			regWrite = 0;
 			next_state = 1;
 		end
 		if(state == 1) begin //PC = PC + 4 e carrega a instrução
@@ -38,7 +41,8 @@ module control (
 		end
 		if(state == 2) begin //Carrega os dois registradores em A e B, faz PC = PC + imm
 			pcWrite = 0;
-
+			pcSource = 0;
+			Load_ir = 0;
 			regWrite = 0;
 			regAWrite = 1;
 			regBWrite = 1;
@@ -66,60 +70,119 @@ module control (
 					next_state = 6;
 				end
 			end
+			if(Instruction[6:0] == 7'b0100011) begin
+				if(Instruction[14:12] == 3'b111) begin	
+					next_state = 9;
+				end
+			end
 		end
 		if(state == 3) begin //addi
 			extensorSignal = 0;
-
+			pcSource = 0;
+			Load_ir = 0;
 			MuxAlu1Sel = 1;
 			Mux4Sel = 2;
 			ALUOp = 1;
 			
 			MuxDataSel = 0;
 			regWrite = 1;
+			call_state = 1;
 
-			next_state = 1;
+			next_state = 30;
 		end
 		if(state == 4) begin //add
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			ALUOp = 1;
-
+			Load_ir = 0;
+			pcSource = 0;
 			MuxDataSel = 0;
 			regWrite = 1;
+			call_state = 1;
 
-			next_state = 1;
+			next_state = 30;
 		end
 		if(state == 5) begin //sub
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			ALUOp = 2;
-
+			Load_ir = 0;
+			pcSource = 0;
 			MuxDataSel = 0;
 			regWrite = 1;
+			call_state = 1;
 
-			next_state = 1;
+			next_state = 30;
 		end
 		if(state == 6) begin //ld
+			regWrite = 0;
 			extensorSignal = 0;
-
+			pcSource = 0;
+			Load_ir = 0;
 			MuxAlu1Sel = 1;
 			Mux4Sel = 2;
 			ALUOp = 1;
 			
 			DMemRead = 0;
+			call_state = 7;
 
-			next_state = 7;
+			next_state = 30;
 		end
 		if(state == 7) begin
+			regWrite = 0;
 			LoadMDR = 1;
+			Load_ir = 0;
+			pcSource = 0;
+			call_state = 8;
 
-			next_state = 8;
+			next_state = 30;
 		end
 		if(state == 8) begin
+			regWrite = 0;
 			MuxDataSel = 1;
 			regWrite = 1;
+			Load_ir = 0;
+			pcSource = 0;
+			call_state = 1;
 
-			next_state = 1;
+			next_state = 30;
+		end
+		if(state == 9) begin //sd
+			extensorSignal = 1;
+			
+			MuxAlu1Sel = 1;
+			Mux4Sel = 2;
+			ALUOp = 1;
+
+			
+
+			next_state = 10;
+		end
+		if(state == 10) begin
+			DMemRead = 1;
+			call_state = 1;
+			next_state = 30;
+		end
+
+
+
+		if(state == 30) begin
+			regWrite = 0;
+			regAWrite = 0;
+			regBWrite = 0;
+			memtoReg = 0;
+			AluOutWrite = 0;
+			MuxDataSel = 0;
+			Load_ir = 0;
+			pcSource = 0;
+			LoadMDR = 0;
+			DMemRead = 0;
+			ALUOp = 0;
+			extensorSignal = 0;
+			IMemRead = 0;
+			pcWrite = 0;
+
+			next_state = call_state;
 		end
 	end
 

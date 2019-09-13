@@ -12,4 +12,4 @@ add wave -position end  sim:/teste/reset
 add wave -position end  -radix decimal sim:/teste/pczinho/pcOut
 add wave -position end  sim:/teste/pczinho/bancoRegister/regs
 
-run 10 us
+run 2 us

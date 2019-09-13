@@ -48,7 +48,7 @@ module cpu(input logic clk, input logic reset);
 	Deslocamento shift(.Shift(2'b00), .Entrada(entradaShift), .N(6'd1), .Saida(saidaShift));
 	
 	Memoria32 meminst(.raddress(pcOut), .waddress(waddress), .Clk(clk), .Datain(data), .Dataout(q), .Wr(IMemRead));
-	Memoria64 memdata(.Clk(clk), .raddress(AluOut), .waddress(AluOut), .Datain(registradorB), .Dataout(saidaMemoria), .Wr(DMemRead));
+	Memoria64 memdata(.Clk(clk), .raddress(AluResult), .waddress(AluResult), .Datain(registradorB), .Dataout(saidaMemoria), .Wr(DMemRead));
 
 	Instr_Reg_RISC_V reginst(.Clk(clk), .Reset(reset), .Load_ir(load_ir), .Entrada(q), .Instr19_15(saida1), .Instr24_20(saida2), .Instr11_7(saida3), .Instr6_0(opCode), .Instr31_0(saidaInstruction));
 
