@@ -1,6 +1,13 @@
-Memoria32.sv
-cpu.sv
+bancoReg.sv
 control.sv
-teste.sv
-register.sv
+cpu.sv
+Deslocamento.sv
+extensor.sv 
+Memoria32.sv
+Memoria64.sv 
+mux.sv
+mux4.sv
 ramOnChip32.v
+ramOnChip64.v
+register.sv
+teste.sv

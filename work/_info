@@ -7,417 +7,379 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/gme/Desktop/PRojetoHardwarea
+Z0 dC:/Users/GODZILA/Desktop/ProjetoHardware
 vbancoReg
 Z1 DXx6 sv_std 3 std 0 22 ;edk3;YfCLjCm[Hd=`UGQ2
-Z2 !s110 1568310988
+Z2 !s110 1568337887
 !i10b 1
 !s100 a:<nhKC@mWB[nDSoijJPm3
-IV;b6eXn:e^kco`U:3B[F62
+I`MOnE05dQ1@`[Y_O[A[=11
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 bancoReg_sv_unit
 S1
-Z4 dC:/Users/gme/Desktop/projetohardware
-Z5 w1568292646
-8C:/Users/gme/Desktop/projetohardware/bancoReg.sv
-FC:/Users/gme/Desktop/projetohardware/bancoReg.sv
+R0
+Z4 w1569247793
+8bancoReg.sv
+FbancoReg.sv
 L0 1
-Z6 OV;L;10.6d;65
+Z5 OV;L;10.6d;65
 r1
 !s85 0
 31
-!s108 1568310987.000000
-!s107 C:/Users/gme/Desktop/projetohardware/bancoReg.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/gme/Desktop/projetohardware/bancoReg.sv|
+Z6 !s108 1568337887.000000
+Z7 !s107 teste.sv|register.sv|ramOnChip64.v|ramOnChip32.v|mux4.sv|mux.sv|Memoria64.sv|Memoria32.sv|extensor.sv|Deslocamento.sv|cpu.sv|control.sv|bancoReg.sv|
+Z8 !s90 -reportprogress|300|-f|modulizada|
 !i113 1
-Z7 o-work work -sv
-Z8 tCvgOpt 0
+Z9 tCvgOpt 0
 nbanco@reg
 vcontrol
 R1
 R2
 !i10b 1
-!s100 VUGDo5LgLzGT:Ji00TS::3
-IKJe3H9QfoGG69imdlGfB@0
+!s100 HgX9?2l`WcDighTkJdeBB2
+I8_il^F=LRRL0;V0hA_2EE3
 R3
 !s105 control_sv_unit
 S1
-R4
-w1568310985
-8C:\Users\gme\Desktop\projetohardware\control.sv
-FC:\Users\gme\Desktop\projetohardware\control.sv
+R0
+w1568337881
+8control.sv
+Fcontrol.sv
 L0 2
-R6
+R5
 r1
 !s85 0
 31
-Z9 !s108 1568310988.000000
-!s107 C:\Users\gme\Desktop\projetohardware\control.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\gme\Desktop\projetohardware\control.sv|
-!i113 1
+R6
 R7
 R8
+!i113 1
+R9
 vcpu
 R1
 R2
 !i10b 1
-!s100 8Lco?o[5Loe:UeDMnYR:50
-INGg^gA91K5PhJDZK[63nc2
+!s100 TiTN0CB[5[SnHe[LFV;i]2
+Io>Hm8LFJolYZDn:;CW_aJ3
 R3
 !s105 cpu_sv_unit
 S1
-R4
-w1568308475
-8C:\Users\gme\Desktop\projetohardware\cpu.sv
-FC:\Users\gme\Desktop\projetohardware\cpu.sv
+R0
+w1568337639
+8cpu.sv
+Fcpu.sv
 L0 1
-R6
+R5
 r1
 !s85 0
 31
-R9
-!s107 C:\Users\gme\Desktop\projetohardware\cpu.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\gme\Desktop\projetohardware\cpu.sv|
-!i113 1
+R6
 R7
 R8
+!i113 1
+R9
 vDeslocamento
 R1
 R2
 !i10b 1
 !s100 EMH`UB_G1bTeiVdfJ^^>l1
-IN0nZEnz3<Vb<DP9`:`B];0
+InE0bLM7_f`2Pfna4BUZW_2
 R3
 !s105 Deslocamento_sv_unit
 S1
+R0
 R4
-R5
-8C:/Users/gme/Desktop/projetohardware/Deslocamento.sv
-FC:/Users/gme/Desktop/projetohardware/Deslocamento.sv
+8Deslocamento.sv
+FDeslocamento.sv
 L0 1
-R6
+R5
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/gme/Desktop/projetohardware/Deslocamento.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/gme/Desktop/projetohardware/Deslocamento.sv|
-!i113 1
+R6
 R7
 R8
+!i113 1
+R9
 n@deslocamento
 vextensor
 R1
 R2
 !i10b 1
 !s100 L@XNE<HBgaeN6:WNj8^>T2
-I^9TWGOn5aCVB79l;9]0Cc3
+Ibb98iUYe]cnk^Wz6dib1<0
 R3
 !s105 extensor_sv_unit
 S1
+R0
 R4
-w1568302089
-8C:/Users/gme/Desktop/projetohardware/extensor.sv
-FC:/Users/gme/Desktop/projetohardware/extensor.sv
+8extensor.sv
+Fextensor.sv
 L0 1
-R6
+R5
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/gme/Desktop/projetohardware/extensor.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/gme/Desktop/projetohardware/extensor.sv|
-!i113 1
+R6
 R7
 R8
+!i113 1
+R9
 Einstr_reg_risc_v
-Z10 w1568292040
-Z11 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z12 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R4
-Z13 8C:/Users/gme/Desktop/projetohardware/Instr_Reg_RISC_V.vhd
-Z14 FC:/Users/gme/Desktop/projetohardware/Instr_Reg_RISC_V.vhd
+Z10 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z11 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z12 8Instr_Reg_RISC_V.vhd
+Z13 FInstr_Reg_RISC_V.vhd
 l0
 L49
-V7TD3cNADG8G:ODlTSzz?c1
+VzgO8gWh_:1J3Q7IMD_6361
 !s100 HF;HEc4<o>]o3`Jjc=WPJ2
-Z15 OV;C;10.6d;65
+Z14 OV;C;10.6d;65
 32
-R2
+Z15 !s110 1568337888
 !i10b 1
-R9
-Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/gme/Desktop/projetohardware/Instr_Reg_RISC_V.vhd|
-Z17 !s107 C:/Users/gme/Desktop/projetohardware/Instr_Reg_RISC_V.vhd|
+R6
+Z16 !s90 -reportprogress|300|-f|vhdlzada|
+!s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
 !i113 1
-Z18 o-work work -2002 -explicit
-Z19 tExplicit 1 CvgOpt 0
+Z17 tExplicit 1 CvgOpt 0
 Abehavioral_arch
+R10
 R11
-R12
-DEx4 work 16 instr_reg_risc_v 0 22 7TD3cNADG8G:ODlTSzz?c1
+DEx4 work 16 instr_reg_risc_v 0 22 zgO8gWh_:1J3Q7IMD_6361
 l68
 L65
-Vo8SZoo^`iHF7`CU3CnhD`1
+Vm]9:ocK@DX0U7ei8f63dc3
 !s100 e?bWG@:SnkVC476;`5UQ[1
-R15
+R14
 32
-R2
+R15
 !i10b 1
-R9
+R6
 R16
+Z18 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
+!i113 1
 R17
-!i113 1
-R18
-R19
-Eintregister
-w1568237912
-R11
-R12
-R0
-8C:/Users/gme/Desktop/PRojetoHardwarea/intregister.vhd
-FC:/Users/gme/Desktop/PRojetoHardwarea/intregister.vhd
-l0
-L49
-VGK0XfNW;P;V9aUDSPKdMR0
-!s100 FUc3=Cfb@a0:ZGSZkloS62
-R15
-32
-!s110 1568238752
-!i10b 1
-!s108 1568238752.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/gme/Desktop/PRojetoHardwarea/intregister.vhd|
-!s107 C:/Users/gme/Desktop/PRojetoHardwarea/intregister.vhd|
-!i113 1
-R18
-R19
 vMemoria32
 R1
-Z20 !s110 1568310989
+R2
 !i10b 1
 !s100 Q2gmKA>Pd1H;3=f[e^lb[3
-Ion6ddPHA5Njn3hB4@fW0b2
+I115geINjKebGNcL<?>K<X1
 R3
 !s105 Memoria32_sv_unit
 S1
+R0
 R4
-R10
-8C:/Users/gme/Desktop/projetohardware/Memoria32.sv
-FC:/Users/gme/Desktop/projetohardware/Memoria32.sv
-Z21 L0 26
-R6
+8Memoria32.sv
+FMemoria32.sv
+Z19 L0 26
+R5
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/gme/Desktop/projetohardware/Memoria32.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/gme/Desktop/projetohardware/Memoria32.sv|
-!i113 1
+R6
 R7
 R8
+!i113 1
+R9
 n@memoria32
 vMemoria64
 R1
-R20
+R2
 !i10b 1
 !s100 1fz3Mgbi`W1QjWk]9CgUO3
-IYlKZZ:5O_c^Jhi`BMVV5B1
+I^?H2gZ;TW^1aQMHUQjIJN1
 R3
 !s105 Memoria64_sv_unit
 S1
+R0
 R4
+8Memoria64.sv
+FMemoria64.sv
+R19
 R5
-8C:/Users/gme/Desktop/projetohardware/Memoria64.sv
-FC:/Users/gme/Desktop/projetohardware/Memoria64.sv
-R21
-R6
 r1
 !s85 0
 31
-Z22 !s108 1568310989.000000
-!s107 C:/Users/gme/Desktop/projetohardware/Memoria64.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/gme/Desktop/projetohardware/Memoria64.sv|
-!i113 1
+R6
 R7
 R8
+!i113 1
+R9
 n@memoria64
 vmux
 R1
-R20
+R2
 !i10b 1
-!s100 BhnZD:C]?8SJl2]kOiO@N0
-InRl@2z_HdeS1Q;Xo@h?7U0
+!s100 <0QGKUSC=]oD41HmVCPog0
+IPiU9<O>R?5IQZR5JQ^nPW0
 R3
 !s105 mux_sv_unit
 S1
-R4
-w1568310063
-8C:\Users\gme\Desktop\projetohardware\mux.sv
-FC:\Users\gme\Desktop\projetohardware\mux.sv
+R0
+w1568333255
+8mux.sv
+Fmux.sv
 L0 1
-R6
+R5
 r1
 !s85 0
 31
-R22
-!s107 C:\Users\gme\Desktop\projetohardware\mux.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\gme\Desktop\projetohardware\mux.sv|
-!i113 1
+R6
 R7
 R8
+!i113 1
+R9
 vmux4
 R1
-R20
+R2
 !i10b 1
-!s100 H2]UQnl5W>d?Z_f];]F3;1
-IgLcYRaP<g6PgIkW3?L4]D1
+!s100 BfjC0=o;g3I5eIoQke7ei1
+IZ=;`7V0:mUEYK=BLFLXJi3
 R3
 !s105 mux4_sv_unit
 S1
-R4
-w1568310016
-8C:\Users\gme\Desktop\projetohardware\mux4.sv
-FC:\Users\gme\Desktop\projetohardware\mux4.sv
+R0
+w1568333528
+8mux4.sv
+Fmux4.sv
 L0 1
-R6
+R5
 r1
 !s85 0
 31
-R22
-!s107 C:\Users\gme\Desktop\projetohardware\mux4.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\gme\Desktop\projetohardware\mux4.sv|
-!i113 1
+R6
 R7
 R8
+!i113 1
+R9
 vramOnChip32
-R20
+R2
 !i10b 1
 !s100 UaK7Z2?CFjC?UDMYYFK;A0
-IP8fo;=]DaP@fbQj>:kgE_3
+If=>0U^>idK5TYjkhDDeYC1
 R3
+R0
 R4
-R10
-8C:/Users/gme/Desktop/projetohardware/ramOnChip32.v
-FC:/Users/gme/Desktop/projetohardware/ramOnChip32.v
-Z23 L0 40
-R6
+8ramOnChip32.v
+FramOnChip32.v
+Z20 L0 40
+R5
 r1
 !s85 0
 31
-R22
-!s107 C:/Users/gme/Desktop/projetohardware/ramOnChip32.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/gme/Desktop/projetohardware/ramOnChip32.v|
-!i113 1
-Z24 o-work work
+R6
+R7
 R8
+!i113 1
+R9
 nram@on@chip32
 vramOnChip64
-R20
+R2
 !i10b 1
 !s100 cocMaFKEzGMH4F3EWeV]X1
-IA^>Pimk5a1FJaSTmce<:l1
+I5Bnob:67XieXOZhhzR6A22
 R3
+R0
 R4
+8ramOnChip64.v
+FramOnChip64.v
+R20
 R5
-8C:/Users/gme/Desktop/projetohardware/ramOnChip64.v
-FC:/Users/gme/Desktop/projetohardware/ramOnChip64.v
-R23
-R6
 r1
 !s85 0
 31
-R22
-!s107 C:/Users/gme/Desktop/projetohardware/ramOnChip64.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/gme/Desktop/projetohardware/ramOnChip64.v|
-!i113 1
-R24
+R6
+R7
 R8
+!i113 1
+R9
 nram@on@chip64
 vregister
 R1
-R20
+R2
 !i10b 1
-!s100 bYE8;I>5ooJ_Za^;]7VNI0
-I;_lXTElJV@OSgS1VPodo`3
+!s100 8D8EOTXH:`BESD?:O?]H72
+I5eCBeWUML005jKUdKSj6X0
 R3
 !s105 register_sv_unit
 S1
+R0
 R4
-R10
-8C:/Users/gme/Desktop/projetohardware/register.sv
-FC:/Users/gme/Desktop/projetohardware/register.sv
+8register.sv
+Fregister.sv
 L0 1
-R6
+R5
 r1
 !s85 0
 31
-R22
-!s107 C:/Users/gme/Desktop/projetohardware/register.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/gme/Desktop/projetohardware/register.sv|
-!i113 1
+R6
 R7
 R8
+!i113 1
+R9
 vteste
 R1
-Z25 !s110 1568310990
+R2
 !i10b 1
-!s100 33HGPIF^JSaL]Cz:QL83O1
-IhL=PBF60bG6;CDz65nXcM3
+!s100 <EmM:L[[nn=acPPH@Z60i2
+IIS8P9BgU6f@]VC>COE@DF2
 R3
 !s105 teste_sv_unit
 S1
-R4
-R10
-8C:/Users/gme/Desktop/projetohardware/teste.sv
-FC:/Users/gme/Desktop/projetohardware/teste.sv
+R0
+w1568332455
+8teste.sv
+Fteste.sv
 L0 3
-R6
+R5
 r1
 !s85 0
 31
-Z26 !s108 1568310990.000000
-!s107 C:/Users/gme/Desktop/projetohardware/teste.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/gme/Desktop/projetohardware/teste.sv|
-!i113 1
+R6
 R7
 R8
+!i113 1
+R9
 Eula64
-R10
-Z27 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-R11
-R12
 R4
-Z28 8C:\Users\gme\Desktop\projetohardware\ula64.vhd
-Z29 FC:\Users\gme\Desktop\projetohardware\ula64.vhd
+Z21 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R10
+R11
+R0
+Z22 8ula64.vhd
+Z23 Fula64.vhd
 l0
 L54
-VNKCl_dCU9VZRibAm_Jh<Y0
+VA[hKfbX3SC@81eT`QAGTa0
 !s100 gXP0QOjWED7GdgGCHP44]0
-R15
+R14
 32
-R25
+R15
 !i10b 1
-R26
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\gme\Desktop\projetohardware\ula64.vhd|
-Z31 !s107 C:\Users\gme\Desktop\projetohardware\ula64.vhd|
-!i113 1
+R6
+R16
 R18
-R19
+!i113 1
+R17
 Abehavioral
-R27
+R21
+R10
 R11
-R12
-Z32 DEx4 work 5 ula64 0 22 NKCl_dCU9VZRibAm_Jh<Y0
+DEx4 work 5 ula64 0 22 A[hKfbX3SC@81eT`QAGTa0
 l80
 L70
-Z33 V0bJGE`7Xojm<X>7FGncTL1
-Z34 !s100 DoJmkJ?1Y9Zk;7@A7oGLb2
-R15
+VITWg]kaXHNgAHH8EBQEIM3
+!s100 DoJmkJ?1Y9Zk;7@A7oGLb2
+R14
 32
-R25
+R15
 !i10b 1
-R26
-R30
-R31
-!i113 1
+R6
+R16
 R18
-R19
+!i113 1
+R17

@@ -9,7 +9,6 @@ vsim -L altera_mf_ver -gui work.teste
 
 add wave -position end  sim:/teste/clk
 add wave -position end  sim:/teste/reset
-add wave -position end  -radix decimal sim:/teste/pcOut
-add wave -position end  sim:/teste/pczinho/q
+add wave -position end  -radix decimal sim:/teste/pczinho/pcOut
 
 run 10 us

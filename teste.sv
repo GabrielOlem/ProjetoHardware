@@ -3,7 +3,6 @@
 module teste;
 	logic clk;
 	logic reset;
-	logic [63:0]pcOut;
 
 	localparam clkperiod = 10000;
 	localparam clkdelay = 5000;
@@ -16,6 +15,6 @@ module teste;
 	end
 
 	always #(clkdelay) clk = ~clk;
-	cpu pczinho(.clk(clk), .reset(reset), .pcOut(pcOut));
+	cpu pczinho(.clk(clk), .reset(reset));
 
 endmodule
