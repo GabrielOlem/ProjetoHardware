@@ -85,6 +85,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	Memoria32
 
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/ramOnChip64.v {1 {vlog -work work -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/ramOnChip64.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module ramOnChip64
+
+Top level modules:
+	ramOnChip64
+
 } {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/cpu.sv {1 {vlog -work work -sv -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/cpu.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module cpu
@@ -92,11 +99,11 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	cpu
 
-} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/ramOnChip64.v {1 {vlog -work work -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/ramOnChip64.v
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/control.sv {1 {vlog -work work -sv -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/control.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module ramOnChip64
+-- Compiling module control
 
 Top level modules:
-	ramOnChip64
+	control
 
 } {} {}}
