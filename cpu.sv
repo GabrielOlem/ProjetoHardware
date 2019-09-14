@@ -36,7 +36,7 @@ module cpu(input logic clk, input logic reset);
 	register SaidaAlu(.clk(clk), .reset(reset), .regWrite(AluOutWrite), .DadoIn(AluResult), .DadoOut(AluOut));
 	register memdataregister(.clk(clk), .reset(reset), .regWrite(LoadMDR), .DadoIn(saidaMemoria), .DadoOut(RegMemoria));
 	
-	mux escreveData(.f(saidaMuxData), .a(AluResult), .b(RegMemoria), .sel(MuxDataSel));
+	mux4 escreveData(.f(saidaMuxData), .a(AluResult), .b(RegMemoria), .c(entradaShift), .sel(MuxDataSel));
 	mux MuxAlu1(.f(Entrada1Alu), .a(pcOut), .b(registradorA), .sel(MuxAlu1Sel));
 	mux4 MuxAlu2(.f(Entrada2Alu), .a(registradorB), .b(64'd4), .c(entradaShift), .d(saidaShift), .sel(Mux4Sel));
 	mux MuxPC(.f(saidaMuxPc), .a(AluResult), .b(AluOut), .sel(PcSource));

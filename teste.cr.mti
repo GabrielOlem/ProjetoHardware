@@ -1,67 +1,4 @@
-C:/Users/ersa/Desktop/ProjetoHardware/mux.sv {1 {vlog -work work -sv -stats=none C:/Users/ersa/Desktop/ProjetoHardware/mux.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module mux
-
-Top level modules:
-	mux
-
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/ramOnChip32.v {1 {vlog -work work -stats=none C:/Users/ersa/Desktop/ProjetoHardware/ramOnChip32.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module ramOnChip32
-
-Top level modules:
-	ramOnChip32
-
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/teste.sv {1 {vlog -work work -sv -stats=none C:/Users/ersa/Desktop/ProjetoHardware/teste.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module teste
-
-Top level modules:
-	teste
-
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/register.sv {1 {vlog -work work -sv -stats=none C:/Users/ersa/Desktop/ProjetoHardware/register.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module register
-
-Top level modules:
-	register
-
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/mux4.sv {1 {vlog -work work -sv -stats=none C:/Users/ersa/Desktop/ProjetoHardware/mux4.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module mux4
-
-Top level modules:
-	mux4
-
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/Memoria32.sv {1 {vlog -work work -sv -stats=none C:/Users/ersa/Desktop/ProjetoHardware/Memoria32.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module Memoria32
-
-Top level modules:
-	Memoria32
-
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/extensor.sv {1 {vlog -work work -sv -stats=none C:/Users/ersa/Desktop/ProjetoHardware/extensor.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module extensor
-
-Top level modules:
-	extensor
-
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/cpu.sv {1 {vlog -work work -sv -stats=none C:/Users/ersa/Desktop/ProjetoHardware/cpu.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module cpu
-
-Top level modules:
-	cpu
-
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/bancoReg.sv {1 {vlog -work work -sv -stats=none C:/Users/ersa/Desktop/ProjetoHardware/bancoReg.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module bancoReg
-
-Top level modules:
-	bancoReg
-
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/Instr_Reg_RISC_V.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/ersa/Desktop/ProjetoHardware/Instr_Reg_RISC_V.vhd
+C:/Users/GODZILA/Desktop/ProjetoHardware/Instr_Reg_RISC_V.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/Instr_Reg_RISC_V.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -69,14 +6,49 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 2
 -- Compiling entity Instr_Reg_RISC_V
 -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
 
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/Memoria64.sv {1 {vlog -work work -sv -stats=none C:/Users/ersa/Desktop/ProjetoHardware/Memoria64.sv
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/ramOnChip32.v {1 {vlog -work work -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/ramOnChip32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module ramOnChip32
+
+Top level modules:
+	ramOnChip32
+
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/Memoria64.sv {1 {vlog -work work -sv -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/Memoria64.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module Memoria64
 
 Top level modules:
 	Memoria64
 
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/ula64.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/ersa/Desktop/ProjetoHardware/ula64.vhd
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/register.sv {1 {vlog -work work -sv -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/register.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/mux4.sv {1 {vlog -work work -sv -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/mux4.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/bancoReg.sv {1 {vlog -work work -sv -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/bancoReg.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module bancoReg
+
+Top level modules:
+	bancoReg
+
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/mux.sv {1 {vlog -work work -sv -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/mux.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/ula64.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/ula64.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -85,14 +57,28 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 2
 -- Compiling entity Ula64
 -- Compiling architecture behavioral of Ula64
 
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/Deslocamento.sv {1 {vlog -work work -sv -stats=none C:/Users/ersa/Desktop/ProjetoHardware/Deslocamento.sv
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/teste.sv {1 {vlog -work work -sv -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/teste.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module teste
+
+Top level modules:
+	teste
+
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/Deslocamento.sv {1 {vlog -work work -sv -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/Deslocamento.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module Deslocamento
 
 Top level modules:
 	Deslocamento
 
-} {} {}} C:/Users/ersa/Desktop/ProjetoHardware/ramOnChip64.v {1 {vlog -work work -stats=none C:/Users/ersa/Desktop/ProjetoHardware/ramOnChip64.v
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/Memoria32.sv {1 {vlog -work work -sv -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/Memoria32.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Memoria32
+
+Top level modules:
+	Memoria32
+
+} {} {}} C:/Users/GODZILA/Desktop/ProjetoHardware/ramOnChip64.v {1 {vlog -work work -stats=none C:/Users/GODZILA/Desktop/ProjetoHardware/ramOnChip64.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module ramOnChip64
 
