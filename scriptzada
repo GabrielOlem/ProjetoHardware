@@ -12,4 +12,5 @@ add wave -position end  sim:/teste/reset
 add wave -position end  -radix decimal sim:/teste/pczinho/PC
 add wave -position end  -radix decimal sim:/teste/pczinho/controle/state
 add wave -position end  -radix decimal sim:/teste/pczinho/bancoRegister/regs
+
 run 0.5 us
