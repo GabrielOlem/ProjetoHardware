@@ -5,12 +5,12 @@ module control (
 	input logic reset,
 	output logic [3:0]extensorSignal,
 	output logic pcWrite, logic PCWriteCond,  logic pcSource, 
-	output logic MuxDataSel, logic [1:0]Mux4Sel,
+	output logic [1:0]MuxDataSel, logic [1:0]Mux4Sel,
 	output logic MuxAlu1Sel, 
 	output logic DMemRead, logic IMemRead, logic LoadMDR,
 	output logic [2:0]ALUOp, logic Load_ir,
 	output logic regWrite, logic regAWrite, logic regBWrite,
-	output logic AluOutWrite
+	output logic AluOutWrite, pcWriteCondBne
 );
 	logic [4:0]state;
 	logic [4:0]next_state;
@@ -81,7 +81,7 @@ module control (
 					next_state = 11;
 				end
 			end
-			if(Instruction[6:0] == 7'b1100011) begin //BNE
+			if(Instruction[6:0] == 7'b1100111) begin //BNE
 				if(Instruction[14:12] == 3'b001) begin
 					next_state = 12;
 				end
@@ -178,18 +178,23 @@ module control (
 		if(state == 11) begin //beq
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
+			pcSource = 1;
+
 			ALUOp = 2;
 			PCWriteCond = 1;
+			pcWrite = 0;
 
 			call_state = 1;
 
 			next_state = 30;
 		end
-		if(state == 12) begin //bne ta errado
+		if(state == 12) begin //bne
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
+			pcSource = 1;
+			
 			ALUOp = 2;
-			PCWriteCond = 1;
+			pcWriteCondBne = 1;
 
 			call_state = 1;
 
@@ -201,26 +206,34 @@ module control (
 			regWrite = 1;
 			
 			call_state = 1;
-			
+
 			next_state = 30;
 		end
-
 		if(state == 30) begin
 			PCWriteCond = 0;
+			pcWriteCondBne = 0;
+			pcWrite = 0;
+			pcSource = 0;
+
 			regWrite = 0;
 			regAWrite = 0;
 			regBWrite = 0;
+
 			AluOutWrite = 0;
+
 			MuxDataSel = 0;
+
 			Load_ir = 0;
-			pcSource = 0;
+			
 			LoadMDR = 0;
 			DMemRead = 0;
-			ALUOp = 0;
-			extensorSignal = 0;
 			IMemRead = 0;
-			pcWrite = 0;
 
+			ALUOp = 0;
+			AluOutWrite = 0;
+
+			extensorSignal = 0;
+			
 			next_state = call_state;
 		end
 	end
