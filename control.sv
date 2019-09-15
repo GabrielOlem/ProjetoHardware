@@ -5,12 +5,13 @@ module control (
 	input logic reset,
 	output logic [3:0]extensorSignal,
 	output logic pcWrite, logic PCWriteCond,  logic pcSource, 
-	output logic [1:0]MuxDataSel, logic [1:0]Mux4Sel,
+	output logic [2:0]MuxDataSel, logic [2:0]Mux4Sel,
 	output logic MuxAlu1Sel, 
 	output logic DMemRead, logic IMemRead, logic LoadMDR,
 	output logic [2:0]ALUOp, logic Load_ir,
 	output logic regWrite, logic regAWrite, logic regBWrite,
-	output logic AluOutWrite, pcWriteCondBne
+	output logic AluOutWrite, pcWriteCondBne,
+	output logic [1:0]SeletorShift
 );
 	logic [4:0]state;
 	logic [4:0]next_state;
@@ -53,17 +54,35 @@ module control (
 			AluOutWrite = 1;
 
 			next_state = 1;
-			if(Instruction[6:0] == 7'b0010011) begin //ADDI
-				if(Instruction[14:12] == 3'b000) begin
+			if(Instruction[6:0] == 7'b0010011) begin 
+				if(Instruction[14:12] == 3'b000) begin //ADDI
 					next_state = 3;
 				end
+				if(Instruction[14:12] == 3'b010) begin //SLTI
+					next_state = 16;
+				end
+				if(Instruction[14:12] == 3'b101 && Instruction[31:26] == 6'd0) begin //SRLI
+					next_state = 19;
+				end
+				if(Instruction[14:12] == 3'b101 && Instruction[31:26] == 6'b010000) begin //SRAI
+					next_state = 20;
+				end
+				if(Instruction[14:12] == 3'b001) begin //SLLI
+					next_state = 21;
+				end
 			end
-			if(Instruction[6:0] == 7'b0110011) begin //ADD
-				if(Instruction[31:25] == 7'b0000000) begin
+			if(Instruction[6:0] == 7'b0110011) begin //Tipo R
+				if(Instruction[31:25] == 7'b0000000 && Instruction[14:12] == 3'b000) begin //ADD
 					next_state = 4;
 				end
 				if(Instruction[31:25] == 7'b0100000) begin //SUB
 					next_state = 5;
+				end
+				if(Instruction[31:25] == 7'b0000000 && Instruction[14:12] == 3'b111) begin //AND
+					next_state = 14;
+				end
+				if(Instruction[31:25] == 7'b0000000 && Instruction[14:12] == 3'b010) begin //SLT
+					next_state = 15;
 				end
 			end
 			if(Instruction[6:0] == 7'b0000011) begin //LD
@@ -84,6 +103,9 @@ module control (
 			if(Instruction[6:0] == 7'b1100111) begin //BNE
 				if(Instruction[14:12] == 3'b001) begin
 					next_state = 12;
+				end
+				if(Instruction[14:12] == 3'b000) begin //JALR
+					next_state = 17;
 				end
 			end
 			if(Instruction[6:0] == 7'b0110111) begin //LUI
@@ -207,6 +229,95 @@ module control (
 			
 			call_state = 1;
 
+			next_state = 30;
+		end
+		if(state == 14) begin //and
+			ALUOp = 3;
+			MuxAlu1Sel = 1;
+			Mux4Sel = 0;
+			MuxDataSel = 0;
+			regWrite = 1;
+
+			call_state = 1;
+
+			next_state = 30;
+		end
+		if(state == 15) begin //slt a alu ta retornando a flag errada
+			ALUOp = 0;
+			MuxAlu1Sel = 1;
+			Mux4Sel = 0;
+			MuxDataSel = 3;
+			regWrite = 1;
+
+			call_state = 1;
+
+			next_state = 30;
+		end
+		if(state == 16) begin //slti a alu ta retornando a flag errada
+			extensorSignal = 0;
+			ALUOp = 0;
+			MuxAlu1Sel = 1;
+			Mux4Sel = 2;
+			MuxDataSel = 3;
+			regWrite = 1;
+
+			call_state = 1;
+
+			next_state = 30;
+		end 
+		if(state == 17) begin //jalr
+			MuxAlu1Sel = 0;
+			ALUOp = 0;
+			MuxDataSel = 0;
+			regWrite = 1;
+			extensorSignal = 0;
+
+			call_state = 18;
+			
+			next_state = 30;
+		end
+		if(state == 18) begin
+			Mux4Sel = 2;
+			MuxAlu1Sel = 0;
+			ALUOp = 1;
+			pcSource = 0;
+			pcWrite = 1;
+			
+			call_state = 1;
+
+			next_state = 30;
+		end
+		if(state == 19) begin //srli
+			MuxAlu1Sel = 1;
+			ALUOp = 0;
+			SeletorShift = 1;
+			MuxDataSel = 4;
+			regWrite = 1;
+
+			call_state = 1;
+			
+			next_state = 30;
+		end
+		if(state == 20) begin //srai
+			MuxAlu1Sel = 1;
+			ALUOp = 0;
+			SeletorShift = 2;
+			MuxDataSel = 4;
+			regWrite = 1;
+
+			call_state = 1;
+
+			next_state = 30;
+		end
+		if(state == 21) begin //slli
+			MuxAlu1Sel = 1;
+			ALUOp = 0;
+			SeletorShift = 0;
+			MuxDataSel = 4;
+			regWrite = 1;
+
+			call_state = 1;
+			
 			next_state = 30;
 		end
 		if(state == 30) begin
