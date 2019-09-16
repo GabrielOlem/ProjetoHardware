@@ -31,7 +31,7 @@ module cpu(input logic clk, input logic reset);
 	logic [1:0]SeletorShift;
 	logic [63:0]saidaShift2;
 
-	control controle(.SeletorShift(SeletorShift), .pcWriteCondBne(pcWriteCondBne), .extensorSignal(extensorSignal), .PCWriteCond(PCWriteCond), .Instruction(saidaInstruction), .AluOutWrite(AluOutWrite), .clk(clk), .reset(reset), .pcWrite(pcWrite), .pcSource(PcSource), .MuxDataSel(MuxDataSel), .Mux4Sel(Mux4Sel), .ALUOp(selector), .MuxAlu1Sel(MuxAlu1Sel), .Load_ir(IRWrite), .regWrite(RegWrite), .regAWrite(regAWrite), .regBWrite(regBWrite), .DMemRead(wrDataMem), .IMemRead(wrInstMem), .LoadMDR(LoadMDR) );
+	control controle(.pcWriteCondBge(pcWriteCondBge), .pcWriteCondBlt(pcWriteCondBlt), .SeletorShift(SeletorShift), .pcWriteCondBne(pcWriteCondBne), .extensorSignal(extensorSignal), .PCWriteCond(PCWriteCond), .Instruction(saidaInstruction), .AluOutWrite(AluOutWrite), .clk(clk), .reset(reset), .pcWrite(pcWrite), .pcSource(PcSource), .MuxDataSel(MuxDataSel), .Mux4Sel(Mux4Sel), .ALUOp(selector), .MuxAlu1Sel(MuxAlu1Sel), .Load_ir(IRWrite), .regWrite(RegWrite), .regAWrite(regAWrite), .regBWrite(regBWrite), .DMemRead(wrDataMem), .IMemRead(wrInstMem), .LoadMDR(LoadMDR) );
 
 	register pcz(.clk(clk), .reset(reset), .regWrite(f2), .DadoIn(saidaMuxPc), .DadoOut(PC));
 	register A(.clk(clk), .reset(reset), .regWrite(regAWrite), .DadoIn(regAIn), .DadoOut(registradorA));
@@ -39,15 +39,18 @@ module cpu(input logic clk, input logic reset);
 	register SaidaAlu(.clk(clk), .reset(reset), .regWrite(AluOutWrite), .DadoIn(Alu), .DadoOut(AluOut));
 	register memdataregister(.clk(clk), .reset(reset), .regWrite(LoadMDR), .DadoIn(saidaMemoria), .DadoOut(MDR));
 	
-	mux4 escreveData(.f(WriteDataReg), .a(Alu), .b(MDR), .c(entradaShift), .d({63'b0, menor}), .e(saidaShift2), .sel(MuxDataSel));
+	mux4 escreveData(.f(WriteDataReg), .a(Alu), .b(MDR), .c(entradaShift), .d({63'b0, Alu[31]}), .e(saidaShift2), .sel(MuxDataSel));
 	mux MuxAlu1(.f(Entrada1Alu), .a(PC), .b(registradorA), .sel(MuxAlu1Sel));
 	mux4 MuxAlu2(.f(Entrada2Alu), .a(WriteDataMem), .b(64'd4), .c(entradaShift), .d(DeslocValue), .sel(Mux4Sel));
 	mux MuxPC(.f(saidaMuxPc), .a(Alu), .b(AluOut), .sel(PcSource));
 	and and1(f1, zero, PCWriteCond);
 	and and2(f3, ~zero, pcWriteCondBne);
-	or or2(f2, f1, f3, pcWrite);
+	and and3(f4, ~Alu[31], pcWriteCondBge);
+	and and4(f5, Alu[31], pcWriteCondBlt);
 
-	Ula64 alu(.A(Entrada1Alu), .B(Entrada2Alu), .Seletor(selector), .S(Alu), .z(zero), .Menor(menor));
+	or or2(f2, f1, f3, f4, f5, pcWrite);
+
+	Ula64 alu(.A(Entrada1Alu), .B(Entrada2Alu), .Seletor(selector), .S(Alu), .z(zero));
 
 	extensor estende(.entrada(saidaInstruction), .saida(entradaShift), .sel(extensorSignal));
 	Deslocamento shift(.Shift(2'b00), .Entrada(entradaShift), .N(6'd1), .Saida(DeslocValue));

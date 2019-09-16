@@ -33,13 +33,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	Memoria32
 
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/extensor.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/extensor.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module extensor
-
-Top level modules:
-	extensor
-
 } {} {}} C:/Users/gme/Desktop/ProjetoHardware/cpu.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/cpu.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module cpu
@@ -47,12 +40,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	cpu
 
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/control.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/control.sv
+} {} {}} C:/Users/gme/Desktop/ProjetoHardware/extensor.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/extensor.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module control
+-- Compiling module extensor
 
 Top level modules:
-	control
+	extensor
 
 } {} {}} C:/Users/gme/Desktop/ProjetoHardware/bancoReg.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/bancoReg.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018

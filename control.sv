@@ -11,7 +11,8 @@ module control (
 	output logic [2:0]ALUOp, logic Load_ir,
 	output logic regWrite, logic regAWrite, logic regBWrite,
 	output logic AluOutWrite, pcWriteCondBne,
-	output logic [1:0]SeletorShift
+	output logic [1:0]SeletorShift,
+	output logic pcWriteCondBge, logic pcWriteCondBlt
 );
 	logic [4:0]state;
 	logic [4:0]next_state;
@@ -104,6 +105,12 @@ module control (
 				end
 			end
 			if(Instruction[6:0] == 7'b1100111) begin //BNE
+				if(Instruction[14:12] == 3'b100) begin //BLT
+					next_state = 25;
+				end
+				if(Instruction[14:12] == 3'b101) begin //BGE
+					next_state = 24;
+				end
 				if(Instruction[14:12] == 3'b001) begin
 					next_state = 12;
 				end
@@ -245,8 +252,8 @@ module control (
 
 			next_state = 30;
 		end
-		if(state == 15) begin //slt a alu ta retornando a flag errada
-			ALUOp = 0;
+		if(state == 15) begin //slt
+			ALUOp = 2;
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			MuxDataSel = 3;
@@ -258,7 +265,7 @@ module control (
 		end
 		if(state == 16) begin //slti a alu ta retornando a flag errada
 			extensorSignal = 0;
-			ALUOp = 0;
+			ALUOp = 2;
 			MuxAlu1Sel = 1;
 			Mux4Sel = 2;
 			MuxDataSel = 3;
@@ -345,9 +352,34 @@ module control (
 			
 			next_state = 30;
 		end
+		if(state == 24) begin //bge
+			MuxAlu1Sel = 1;
+			Mux4Sel = 0;
+			ALUOp = 2;
+			pcWriteCondBge = 1;
+			pcSource = 1;
+
+			call_state = 1;
+
+			next_state = 30;
+		end
+		if(state == 25) begin //blt
+			MuxAlu1Sel = 1;
+			Mux4Sel = 0;
+			ALUOp = 2;
+			pcSource = 1;
+			
+			pcWriteCondBlt = 1;
+
+			call_state = 1;
+
+			next_state = 30;
+		end
 		if(state == 30) begin
 			PCWriteCond = 0;
 			pcWriteCondBne = 0;
+			pcWriteCondBge = 0;
+			pcWriteCondBlt = 0;
 			pcWrite = 0;
 			pcSource = 0;
 
