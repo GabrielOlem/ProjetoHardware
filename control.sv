@@ -54,6 +54,9 @@ module control (
 			AluOutWrite = 1;
 
 			next_state = 1;
+			if(Instruction[6:0] == 7'b1101111) begin //JAL
+				next_state = 22;
+			end
 			if(Instruction[6:0] == 7'b0010011) begin 
 				if(Instruction[14:12] == 3'b000) begin //ADDI
 					next_state = 3;
@@ -315,6 +318,28 @@ module control (
 			SeletorShift = 0;
 			MuxDataSel = 4;
 			regWrite = 1;
+
+			call_state = 1;
+			
+			next_state = 30;
+		end
+		if(state == 22) begin //jal
+			MuxAlu1Sel = 0;
+			ALUOp = 0;
+			MuxDataSel = 0;
+			regWrite = 1;
+
+			call_state = 23;
+
+			next_state = 30;
+		end
+		if(state == 23) begin
+			MuxAlu1Sel = 0;
+			extensorSignal = 4;
+			Mux4Sel = 3;
+			ALUOp = 1;
+			pcSource = 0;
+			pcWrite = 1;
 
 			call_state = 1;
 			

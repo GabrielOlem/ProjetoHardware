@@ -1,477 +1,26 @@
-# Compile of control.sv was successful.
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:09:23 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:09:23 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:09:24 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:09:25 on Sep 15,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:09:26 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-3017) cpu.sv(40): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/escreveData File: mux4.sv
-# ** Warning: (vsim-3722) cpu.sv(40): [TFMPC] - Missing connection for port 'd'.
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Menor'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlft09exiv".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft09exiv
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:10:34 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:10:34 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:10:34 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:10:34 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:10:37 on Sep 15,2019, Elapsed time: 0:01:11
-# Errors: 0, Warnings: 10
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:10:37 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-3017) cpu.sv(40): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/escreveData File: mux4.sv
-# ** Warning: (vsim-3722) cpu.sv(40): [TFMPC] - Missing connection for port 'd'.
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Menor'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftwzj8bn".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftwzj8bn
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:11:27 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:11:27 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:11:27 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:11:27 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:11:30 on Sep 15,2019, Elapsed time: 0:00:53
-# Errors: 0, Warnings: 10
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:11:30 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-3017) cpu.sv(40): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/escreveData File: mux4.sv
-# ** Warning: (vsim-3722) cpu.sv(40): [TFMPC] - Missing connection for port 'd'.
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Menor'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftstx857".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftstx857
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:18:11 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:18:11 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:18:11 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:18:11 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:18:13 on Sep 15,2019, Elapsed time: 0:06:43
-# Errors: 0, Warnings: 10
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:18:14 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-3015) cpu.sv(40): [PCDPC] - Port size (64) does not match connection size (1) for port 'd'. The port definition is at: mux4.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/escreveData File: mux4.sv
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftzy77sa".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftzy77sa
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-add wave -position end  sim:/teste/pczinho/alu/Menor
-restart
-# ** Warning: (vsim-3015) cpu.sv(40): [PCDPC] - Port size (64) does not match connection size (1) for port 'd'. The port definition is at: mux4.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/escreveData File: mux4.sv
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-run
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
+# Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/gme/Desktop/ProjetoHardware/teste.mpf).  File can not be renamed.
+# Compile of bancoReg.sv was successful.
 # Compile of control.sv was successful.
 # Compile of cpu.sv was successful.
-# 2 compiles, 0 failed with no errors.
+# Compile of Deslocamento.sv was successful.
+# Compile of extensor.sv was successful.
+# Compile of Instr_Reg_RISC_V.vhd was successful.
+# Compile of Memoria32.sv was successful.
+# Compile of Memoria64.sv was successful.
+# Compile of mux.sv was successful.
+# Compile of mux4.sv was successful.
+# Compile of ramOnChip32.v was successful.
+# Compile of ramOnChip64.v was successful.
+# Compile of register.sv was successful.
+# Compile of teste.sv was successful.
+# Compile of ula64.vhd was successful.
+# 15 compiles, 0 failed with no errors.
 do scriptzada
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:20:02 on Sep 15,2019
+# Start time: 07:19:36 on Sep 16,2019
 # vlog -reportprogress 300 -f modulizada 
 # -- Compiling module bancoReg
 # -- Compiling module control
@@ -489,10 +38,10 @@ do scriptzada
 # 
 # Top level modules:
 # 	teste
-# End time: 14:20:02 on Sep 15,2019, Elapsed time: 0:00:00
+# End time: 07:19:37 on Sep 16,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:20:02 on Sep 15,2019
+# Start time: 07:19:37 on Sep 16,2019
 # vcom -reportprogress 300 -f vhdlzada 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -502,12 +51,10 @@ do scriptzada
 # -- Compiling architecture behavioral of Ula64
 # -- Compiling entity Instr_Reg_RISC_V
 # -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:20:02 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:20:05 on Sep 15,2019, Elapsed time: 0:01:51
+# End time: 07:19:37 on Sep 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:20:05 on Sep 15,2019
+# Start time: 07:19:37 on Sep 16,2019
 # Loading sv_std.std
 # Loading work.teste
 # Loading work.cpu
@@ -532,21 +79,24 @@ do scriptzada
 # Loading ieee.std_logic_arith(body)
 # Loading work.ula64(behavioral)
 # Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
+# ** Warning: (vsim-3017) cpu.sv(44): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/MuxAlu2 File: mux4.sv
+# ** Warning: (vsim-3722) cpu.sv(44): [TFMPC] - Missing connection for port 'e'.
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
+# ** Warning: (vsim-3015) cpu.sv(55): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftgzg4xa".
+#           Attempting to use alternate WLF file "./wlftmqgnzv".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftgzg4xa
+#           Using alternate file: ./wlftmqgnzv
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
@@ -571,772 +121,16 @@ do scriptzada
 # Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:20:47 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:20:47 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:20:47 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:20:48 on Sep 15,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# End time: 14:20:50 on Sep 15,2019, Elapsed time: 0:00:45
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:20:50 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftyrbi62".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftyrbi62
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of control.sv was successful.
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:32:54 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:32:54 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:32:55 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:32:55 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:32:57 on Sep 15,2019, Elapsed time: 0:12:07
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:32:57 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftbiraj2".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftbiraj2
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:34:07 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:34:07 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:34:07 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:34:07 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:34:09 on Sep 15,2019, Elapsed time: 0:01:12
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:34:09 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlft8kz5sh".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft8kz5sh
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:34:56 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:34:56 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:34:56 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:34:56 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:34:58 on Sep 15,2019, Elapsed time: 0:00:49
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:34:59 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftq342hz".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftq342hz
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:39:40 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:39:40 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:39:40 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:39:41 on Sep 15,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# End time: 14:39:43 on Sep 15,2019, Elapsed time: 0:04:44
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:39:43 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlft9qsacs".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft9qsacs
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of cpu.sv was successful.
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:41:33 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:41:34 on Sep 15,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:41:34 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:41:34 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:41:36 on Sep 15,2019, Elapsed time: 0:01:53
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:41:36 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlft1ntha8".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft1ntha8
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-add wave -position end  sim:/teste/pczinho/menor
-restart
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-run
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
+add wave -position end  sim:/teste/pczinho/alu/A
+add wave -position end  sim:/teste/pczinho/alu/B
+add wave -position end  sim:/teste/pczinho/alu/Maior
+add wave -position end  sim:/teste/pczinho/alu/Maior
 add wave -position end  sim:/teste/pczinho/alu/Menor
-restart
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-run
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
 add wave -position end  sim:/teste/pczinho/alu/Igual
-restart
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-run
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-add wave -position end  sim:/teste/pczinho/alu/A
-add wave -position end  sim:/teste/pczinho/alu/B
-restart
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-run
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of cpu.sv was successful.
-# Compile of ula64.vhd was successful.
-# 2 compiles, 0 failed with no errors.
 do scriptzada
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:54:05 on Sep 15,2019
+# Start time: 07:23:12 on Sep 16,2019
 # vlog -reportprogress 300 -f modulizada 
 # -- Compiling module bancoReg
 # -- Compiling module control
@@ -1354,10 +148,10 @@ do scriptzada
 # 
 # Top level modules:
 # 	teste
-# End time: 14:54:05 on Sep 15,2019, Elapsed time: 0:00:00
+# End time: 07:23:13 on Sep 16,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:54:06 on Sep 15,2019
+# Start time: 07:23:13 on Sep 16,2019
 # vcom -reportprogress 300 -f vhdlzada 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1367,12 +161,12 @@ do scriptzada
 # -- Compiling architecture behavioral of Ula64
 # -- Compiling entity Instr_Reg_RISC_V
 # -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:54:06 on Sep 15,2019, Elapsed time: 0:00:00
+# End time: 07:23:13 on Sep 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 14:54:08 on Sep 15,2019, Elapsed time: 0:12:32
-# Errors: 0, Warnings: 0
+# End time: 07:23:15 on Sep 16,2019, Elapsed time: 0:03:38
+# Errors: 0, Warnings: 9
 # vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:54:08 on Sep 15,2019
+# Start time: 07:23:15 on Sep 16,2019
 # Loading sv_std.std
 # Loading work.teste
 # Loading work.cpu
@@ -1397,19 +191,24 @@ do scriptzada
 # Loading ieee.std_logic_arith(body)
 # Loading work.ula64(behavioral)
 # Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
+# ** Warning: (vsim-3017) cpu.sv(44): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/MuxAlu2 File: mux4.sv
+# ** Warning: (vsim-3722) cpu.sv(44): [TFMPC] - Missing connection for port 'e'.
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(54): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
+#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
+# ** Warning: (vsim-3015) cpu.sv(55): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftv8jncq".
+#           Attempting to use alternate WLF file "./wlft3emfi4".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftv8jncq
+#           Using alternate file: ./wlft3emfi4
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
@@ -1420,146 +219,6 @@ do scriptzada
 # Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-add wave -position end  sim:/teste/pczinho/alu/A
-add wave -position end  sim:/teste/pczinho/alu/B
-add wave -position end  sim:/teste/pczinho/alu/Menor
-restart
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(54): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-run
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of ula64.vhd was successful.
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:55:53 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 14:55:53 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 14:55:53 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 14:55:53 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:55:56 on Sep 15,2019, Elapsed time: 0:01:48
-# Errors: 0, Warnings: 0
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 14:55:56 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(54): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlfthjn3tj".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfthjn3tj
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-add wave -position end  sim:/teste/pczinho/alu/Menor
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
@@ -1577,13 +236,18 @@ add wave -position end  sim:/teste/pczinho/alu/Menor
 add wave -position 5  sim:/teste/pczinho/alu/A
 add wave -position 6  sim:/teste/pczinho/alu/B
 restart
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
+# ** Warning: (vsim-3017) cpu.sv(44): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/MuxAlu2 File: mux4.sv
+# ** Warning: (vsim-3722) cpu.sv(44): [TFMPC] - Missing connection for port 'e'.
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(54): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
+# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
+#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
+# ** Warning: (vsim-3015) cpu.sv(55): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
 run
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
@@ -1610,102 +274,13 @@ run
 # Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of cpu.sv was successful.
-# Compile of ula64.vhd was successful.
-# 2 compiles, 0 failed with no errors.
-add wave -position end  sim:/teste/pczinho/f4
-restart
-# Loading work.cpu
-# Loading work.ula64(behavioral)
-# ** Warning: (vsim-8822) C:/Users/GODZILA/Desktop/ProjetoHardware/cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: C:/Users/GODZILA/Desktop/ProjetoHardware/ula64.vhd
-# ** Warning: (vsim-8822) C:/Users/GODZILA/Desktop/ProjetoHardware/cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: C:/Users/GODZILA/Desktop/ProjetoHardware/ula64.vhd
-# ** Warning: (vsim-8822) C:/Users/GODZILA/Desktop/ProjetoHardware/cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: C:/Users/GODZILA/Desktop/ProjetoHardware/ula64.vhd
-# ** Warning: (vsim-3015) C:/Users/GODZILA/Desktop/ProjetoHardware/cpu.sv(54): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-run
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-run
-add wave -position end  sim:/teste/pczinho/alu/Igual
-restart
-# ** Warning: (vsim-8822) C:/Users/GODZILA/Desktop/ProjetoHardware/cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: C:/Users/GODZILA/Desktop/ProjetoHardware/ula64.vhd
-# ** Warning: (vsim-8822) C:/Users/GODZILA/Desktop/ProjetoHardware/cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: C:/Users/GODZILA/Desktop/ProjetoHardware/ula64.vhd
-# ** Warning: (vsim-8822) C:/Users/GODZILA/Desktop/ProjetoHardware/cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: C:/Users/GODZILA/Desktop/ProjetoHardware/ula64.vhd
-# ** Warning: (vsim-3015) C:/Users/GODZILA/Desktop/ProjetoHardware/cpu.sv(54): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-run
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of bancoReg.sv was successful.
 # Compile of control.sv was successful.
-# Compile of cpu.sv was successful.
-# Compile of Deslocamento.sv was successful.
 # Compile of extensor.sv was successful.
-# Compile of Instr_Reg_RISC_V.vhd was successful.
-# Compile of Memoria32.sv was successful.
-# Compile of Memoria64.sv was successful.
-# Compile of mux.sv was successful.
-# Compile of mux4.sv was successful.
-# Compile of ramOnChip32.v was successful.
-# Compile of ramOnChip64.v was successful.
-# Compile of register.sv was successful.
-# Compile of teste.sv was successful.
-# Compile of ula64.vhd was successful.
-# 15 compiles, 0 failed with no errors.
- do scriptzada
+# 2 compiles, 0 failed with no errors.
+do scriptzada
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:18:31 on Sep 15,2019
+# Start time: 07:43:50 on Sep 16,2019
 # vlog -reportprogress 300 -f modulizada 
 # -- Compiling module bancoReg
 # -- Compiling module control
@@ -1723,10 +298,10 @@ run
 # 
 # Top level modules:
 # 	teste
-# End time: 15:18:31 on Sep 15,2019, Elapsed time: 0:00:00
+# End time: 07:43:51 on Sep 16,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:18:31 on Sep 15,2019
+# Start time: 07:43:51 on Sep 16,2019
 # vcom -reportprogress 300 -f vhdlzada 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1736,739 +311,12 @@ run
 # -- Compiling architecture behavioral of Ula64
 # -- Compiling entity Instr_Reg_RISC_V
 # -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 15:18:32 on Sep 15,2019, Elapsed time: 0:00:01
+# End time: 07:43:51 on Sep 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 15:18:34 on Sep 15,2019, Elapsed time: 0:22:38
+# End time: 07:43:53 on Sep 16,2019, Elapsed time: 0:20:38
 # Errors: 0, Warnings: 0
 # vsim -L altera_mf_ver -gui work.teste 
-# Start time: 15:18:34 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftw4sga8".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftw4sga8
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
- do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:19:27 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 15:19:27 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:19:27 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 15:19:27 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:19:29 on Sep 15,2019, Elapsed time: 0:00:55
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 15:19:29 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftwaaait".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftwaaait
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of control.sv was successful.
- do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:23:38 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 15:23:38 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:23:38 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 15:23:38 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:23:41 on Sep 15,2019, Elapsed time: 0:04:12
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 15:23:41 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftg537hr".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftg537hr
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
- do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:25:47 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 15:25:47 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:25:47 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 15:25:47 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:25:49 on Sep 15,2019, Elapsed time: 0:02:08
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 15:25:49 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftd3fdme".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftd3fdme
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
- do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:27:57 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 15:27:57 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:27:57 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 15:27:57 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:28:00 on Sep 15,2019, Elapsed time: 0:02:11
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 15:28:00 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftn2tg6k".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftn2tg6k
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
- do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:28:40 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 15:28:41 on Sep 15,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:28:41 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 15:28:41 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:28:43 on Sep 15,2019, Elapsed time: 0:00:43
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 15:28:43 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftxgati6".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftxgati6
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
- do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:31:22 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 15:31:22 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:31:22 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 15:31:22 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:31:24 on Sep 15,2019, Elapsed time: 0:02:41
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 15:31:24 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(48): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(53): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlft7v1ewt".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft7v1ewt
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of control.sv was successful.
-# Compile of cpu.sv failed with 1 errors.
-# Compile of mux4.sv was successful.
-# 3 compiles, 1 failed with 1 error.
-# Compile of cpu.sv was successful.
- do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:51:49 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 15:51:49 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:51:50 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 15:51:50 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:51:52 on Sep 15,2019, Elapsed time: 0:20:28
-# Errors: 0, Warnings: 7
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 15:51:52 on Sep 15,2019
+# Start time: 07:43:53 on Sep 16,2019
 # Loading sv_std.std
 # Loading work.teste
 # Loading work.cpu
@@ -2508,9 +356,9 @@ run
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlft4knx0q".
+#           Attempting to use alternate WLF file "./wlft3cny9n".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft4knx0q
+#           Using alternate file: ./wlft3cny9n
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
@@ -2535,10 +383,10 @@ run
 # Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
- do scriptzada
+do scriptzada
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:52:46 on Sep 15,2019
+# Start time: 07:46:07 on Sep 16,2019
 # vlog -reportprogress 300 -f modulizada 
 # -- Compiling module bancoReg
 # -- Compiling module control
@@ -2556,10 +404,10 @@ run
 # 
 # Top level modules:
 # 	teste
-# End time: 15:52:46 on Sep 15,2019, Elapsed time: 0:00:00
+# End time: 07:46:07 on Sep 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 15:52:46 on Sep 15,2019
+# Start time: 07:46:07 on Sep 16,2019
 # vcom -reportprogress 300 -f vhdlzada 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2569,12 +417,15 @@ run
 # -- Compiling architecture behavioral of Ula64
 # -- Compiling entity Instr_Reg_RISC_V
 # -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 15:52:46 on Sep 15,2019, Elapsed time: 0:00:00
+# End time: 07:46:07 on Sep 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 15:52:48 on Sep 15,2019, Elapsed time: 0:00:56
+# Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/gme/Desktop/ProjetoHardware/teste.mpf).  File can not be renamed.
+# End time: 07:46:09 on Sep 16,2019, Elapsed time: 0:02:16
 # Errors: 0, Warnings: 9
 # vsim -L altera_mf_ver -gui work.teste 
-# Start time: 15:52:48 on Sep 15,2019
+# Start time: 07:46:09 on Sep 16,2019
 # Loading sv_std.std
 # Loading work.teste
 # Loading work.cpu
@@ -2614,9 +465,9 @@ run
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftmvf0a6".
+#           Attempting to use alternate WLF file "./wlft1zieb9".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftmvf0a6
+#           Using alternate file: ./wlft1zieb9
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
@@ -2641,11 +492,10 @@ run
 # Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of control.sv was successful.
 do scriptzada
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 16:03:15 on Sep 15,2019
+# Start time: 07:49:38 on Sep 16,2019
 # vlog -reportprogress 300 -f modulizada 
 # -- Compiling module bancoReg
 # -- Compiling module control
@@ -2663,10 +513,10 @@ do scriptzada
 # 
 # Top level modules:
 # 	teste
-# End time: 16:03:15 on Sep 15,2019, Elapsed time: 0:00:00
+# End time: 07:49:38 on Sep 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 16:03:15 on Sep 15,2019
+# Start time: 07:49:38 on Sep 16,2019
 # vcom -reportprogress 300 -f vhdlzada 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2676,12 +526,12 @@ do scriptzada
 # -- Compiling architecture behavioral of Ula64
 # -- Compiling entity Instr_Reg_RISC_V
 # -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 16:03:16 on Sep 15,2019, Elapsed time: 0:00:01
+# End time: 07:49:38 on Sep 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:03:18 on Sep 15,2019, Elapsed time: 0:10:30
+# End time: 07:49:40 on Sep 16,2019, Elapsed time: 0:03:31
 # Errors: 0, Warnings: 9
 # vsim -L altera_mf_ver -gui work.teste 
-# Start time: 16:03:18 on Sep 15,2019
+# Start time: 07:49:40 on Sep 16,2019
 # Loading sv_std.std
 # Loading work.teste
 # Loading work.cpu
@@ -2721,9 +571,9 @@ do scriptzada
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftn2dss6".
+#           Attempting to use alternate WLF file "./wlft0h2see".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftn2dss6
+#           Using alternate file: ./wlft0h2see
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
@@ -2748,51 +598,10 @@ do scriptzada
 # Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-add wave -position end  sim:/teste/pczinho/controle/Instruction
-restart
-# ** Warning: (vsim-3017) cpu.sv(44): [TFMPC] - Too few port connections. Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/MuxAlu2 File: mux4.sv
-# ** Warning: (vsim-3722) cpu.sv(44): [TFMPC] - Missing connection for port 'e'.
-# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(55): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-run
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of control.sv was successful.
 do scriptzada
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 16:11:44 on Sep 15,2019
+# Start time: 07:55:36 on Sep 16,2019
 # vlog -reportprogress 300 -f modulizada 
 # -- Compiling module bancoReg
 # -- Compiling module control
@@ -2810,10 +619,10 @@ do scriptzada
 # 
 # Top level modules:
 # 	teste
-# End time: 16:11:44 on Sep 15,2019, Elapsed time: 0:00:00
+# End time: 07:55:36 on Sep 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 16:11:45 on Sep 15,2019
+# Start time: 07:55:36 on Sep 16,2019
 # vcom -reportprogress 300 -f vhdlzada 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2823,12 +632,12 @@ do scriptzada
 # -- Compiling architecture behavioral of Ula64
 # -- Compiling entity Instr_Reg_RISC_V
 # -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 16:11:45 on Sep 15,2019, Elapsed time: 0:00:00
+# End time: 07:55:36 on Sep 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:11:47 on Sep 15,2019, Elapsed time: 0:08:29
-# Errors: 0, Warnings: 0
+# End time: 07:55:39 on Sep 16,2019, Elapsed time: 0:05:59
+# Errors: 0, Warnings: 9
 # vsim -L altera_mf_ver -gui work.teste 
-# Start time: 16:11:47 on Sep 15,2019
+# Start time: 07:55:39 on Sep 16,2019
 # Loading sv_std.std
 # Loading work.teste
 # Loading work.cpu
@@ -2868,9 +677,9 @@ do scriptzada
 #    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlft1dt7rm".
+#           Attempting to use alternate WLF file "./wlft9jbi1t".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft1dt7rm
+#           Using alternate file: ./wlft9jbi1t
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
@@ -2895,121 +704,5 @@ do scriptzada
 # Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
-# Compile of control.sv was successful.
-do scriptzada
-# ** Warning: (vlib-34) Library already exists at "work".
-# ** Error: (vlib-35) Failed to create directory "work".
-# Permission denied. (errno = EACCES)
-# Error in macro ./scriptzada line 3
-# ** Error: (vlib-35) Failed to create directory "work".
-# Permission denied. (errno = EACCES)
-#     while executing
-# "error [FixExecError $msg]"
-#     (procedure "vlib" line 7)
-#     invoked from within
-# "vlib work"
-do scriptzada
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 16:15:39 on Sep 15,2019
-# vlog -reportprogress 300 -f modulizada 
-# -- Compiling module bancoReg
-# -- Compiling module control
-# -- Compiling module cpu
-# -- Compiling module Deslocamento
-# -- Compiling module extensor
-# -- Compiling module Memoria32
-# -- Compiling module Memoria64
-# -- Compiling module mux
-# -- Compiling module mux4
-# -- Compiling module ramOnChip32
-# -- Compiling module ramOnChip64
-# -- Compiling module register
-# -- Compiling module teste
-# 
-# Top level modules:
-# 	teste
-# End time: 16:15:39 on Sep 15,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 16:15:39 on Sep 15,2019
-# vcom -reportprogress 300 -f vhdlzada 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity Ula64
-# -- Compiling architecture behavioral of Ula64
-# -- Compiling entity Instr_Reg_RISC_V
-# -- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-# End time: 16:15:40 on Sep 15,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# End time: 16:15:42 on Sep 15,2019, Elapsed time: 0:03:55
-# Errors: 2, Warnings: 9
-# vsim -L altera_mf_ver -gui work.teste 
-# Start time: 16:15:42 on Sep 15,2019
-# Loading sv_std.std
-# Loading work.teste
-# Loading work.cpu
-# Loading work.control
-# Loading work.register
-# Loading work.mux4
-# Loading work.mux
-# Loading work.extensor
-# Loading work.Deslocamento
-# Loading work.Memoria32
-# Loading work.ramOnChip32
-# Loading altera_mf_ver.altsyncram
-# Loading work.Memoria64
-# Loading work.ramOnChip64
-# Loading work.bancoReg
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading work.ula64(behavioral)
-# Loading work.instr_reg_risc_v(behavioral_arch)
-# ** Warning: (vsim-3017) cpu.sv(44): [TFMPC] - Too few port connections. Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/MuxAlu2 File: mux4.sv
-# ** Warning: (vsim-3722) cpu.sv(44): [TFMPC] - Missing connection for port 'e'.
-# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Overflow'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Negativo'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Igual'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-8822) cpu.sv(50): [TFMPC] - Missing Verilog connection for formal VHDL port 'Maior'.
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/alu File: ula64.vhd
-# ** Warning: (vsim-3015) cpu.sv(55): [PCDPC] - Port size (32) does not match connection size (64) for port 'raddress'. The port definition is at: Memoria32.sv(27).
-#    Time: 0 ps  Iteration: 0  Instance: /teste/pczinho/meminst File: Memoria32.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gme  Hostname: HWC06  ProcessID: 7544
-#           Attempting to use alternate WLF file "./wlftnh49gk".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftnh49gk
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.meminst.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock0.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock1.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock2.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock3.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock4.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock5.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock6.altsyncram_component.m_default.altsyncram_inst
-# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
-# Time: 0  Instance: teste.pczinho.memdata.memBlock7.altsyncram_component.m_default.altsyncram_inst
+# End time: 07:56:15 on Sep 16,2019, Elapsed time: 0:00:36
+# Errors: 0, Warnings: 9

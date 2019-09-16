@@ -32,5 +32,13 @@ module extensor(input logic [31:0]entrada, output logic [63:0]saida, input logic
 				saida = {32'b11111111111111111111111111111111, entrada[31:12], 12'b0};
 			end
 		end
+		if(sel == 4) begin
+			if(entrada[31] == 0)begin
+				saida = {43'b0, entrada[31], entrada[19:12], entrada[20], entrada[30:21], 1'b0};
+			end
+			else begin
+				saida = {43'b1111111111111111111111111111111111111111111, entrada[31], entrada[19:12], entrada[20], entrada[30:21], 1'b0};
+			end
+		end
 	end
 endmodule
