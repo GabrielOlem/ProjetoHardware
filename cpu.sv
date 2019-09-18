@@ -64,7 +64,7 @@ module cpu(input logic clk, input logic reset);
 	Deslocamento shift(.Shift(2'b00), .Entrada(entradaShift), .N(6'd1), .Saida(DeslocValue));
 	Deslocamento shift2(.Shift(SeletorShift), .Entrada(Alu), .N(saidaInstruction[25:20]), .Saida(saidaShift2));
 	Memoria32 meminst(.raddress(PC), .waddress(waddress), .Clk(clk), .Datain(data), .Dataout(MemOutInst), .Wr(wrInstMem));
-	Memoria64 memdata(.Clk(clk), .raddress(Alu), .waddress(Alu), .Datain(WriteDataMem), .Dataout(saidaMemoria), .Wr(wrDataMem));
+	Memoria64 memdata(.Clk(clk), .raddress(Alu), .waddress(Alu), .Datain(guardar), .Dataout(saidaMemoria), .Wr(wrDataMem));
 
 	Instr_Reg_RISC_V reginst(.Clk(clk), .Reset(reset), .Load_ir(IRWrite), .Entrada(MemOutInst), .Instr19_15(saida1), .Instr24_20(saida2), .Instr11_7(WriteRegister), .Instr6_0(opCode), .Instr31_0(saidaInstruction));
 	armario guardaroupa(.rs2(WriteDataMem), .MemData(MDR), .guardado(minion), .sel(selDataMem));

@@ -10,10 +10,10 @@ module control (
 	output logic DMemRead, logic IMemRead, logic LoadMDR,
 	output logic [2:0]ALUOp, logic Load_ir,
 	output logic regWrite, logic regAWrite, logic regBWrite,
-	output logic AluOutWrite, pcWriteCondBne,
+	output logic AluOutWrite, logic pcWriteCondBne,
 	output logic [1:0]SeletorShift,
 	output logic pcWriteCondBge, logic pcWriteCondBlt,
-	output logic [4:0]HistSel, [1:0]selDataMem, [2:0]selMuxMem
+	output logic [4:0]HistSel, logic [1:0]selDataMem, logic [2:0]selMuxMem
 );
 	logic [5:0]state;
 	logic [5:0]next_state;
@@ -197,41 +197,37 @@ module control (
 			ALUOp = 1;
 			
 			DMemRead = 0;
-			call_state = 7;
 
-			next_state = 0;
+			next_state = 7;
 		end
 		if(state == 7) begin
 			LoadMDR = 1;
 			if(Instruction[14:12] == 3'b000) begin //lb
-				call_state = 26;
+				next_state = 26;
 			end
 			if(Instruction[14:12] == 3'b001) begin //lh
-				call_state = 27;
+				next_state = 27;
 			end
 			if(Instruction[14:12] == 3'b010) begin //lw
-				call_state = 28;
+				next_state = 28;
 			end
 			if(Instruction[14:12] == 3'b100) begin //lbu
-				call_state = 29;
+				next_state = 29;
 			end
 			if(Instruction[14:12] == 3'b101) begin //lhu
-				call_state = 30;
+				next_state = 30;
 			end
 			if(Instruction[14:12] == 3'b110) begin //lwu
-				call_state = 31;
+				next_state = 31;
 			end
 			if(Instruction[14:12] == 3'b011) begin //ld
-				call_state = 8;
+				next_state = 8;
 			end
-
-			next_state = 0;
 		end
 		if(state == 8) begin
 			MuxDataSel = 1;
 			regWrite = 1;
-			Load_ir = 0;
-			pcSource = 0;
+
 			call_state = 1;
 
 			next_state = 0;
@@ -483,17 +479,15 @@ module control (
 		end
 		if(state == 34) begin
 			LoadMDR = 1;
-
 			if(Instruction[14:12] == 3'b010) begin
-				call_state = 35;
+				next_state = 35;
 			end
 			if(Instruction[14:12] == 3'b001) begin
-				call_state = 36;
+				next_state = 36;
 			end
 			if(Instruction[14:12] == 3'b000) begin
-				call_state = 37;
+				next_state = 37;
 			end
-			next_state = 0;
 		end
 		if(state == 35) begin //SW
 			selDataMem = 0;
