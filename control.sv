@@ -66,7 +66,10 @@ module control (
 			MuxAlu1Sel = 1'b0;
 			Mux4Sel = 2'b01;
 			ALUOp = 3'd1;
-			next_state = 2;
+
+			call_state = 2;
+			
+			next_state = 0;
 		end
 		if(state == 2) begin //Carrega os dois registradores em A e B, faz PC = PC + imm
 			regAWrite = 1;
@@ -77,7 +80,8 @@ module control (
 			Mux4Sel = 3;
 			ALUOp = 1;
 			AluOutWrite = 1;
-
+			call_state = 1;
+			
 			next_state = 1;
 			if(Instruction[6:0] == 7'b1101111) begin //JAL
 				next_state = 22;
