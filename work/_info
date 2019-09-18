@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/gme/Desktop/ProjetoHardware
 varmario
 Z1 DXx6 sv_std 3 std 0 22 ;edk3;YfCLjCm[Hd=`UGQ2
-Z2 !s110 1568828319
+Z2 !s110 1568829176
 !i10b 1
 !s100 <I]2>F^T>^m3KYI25KTdf3
 IglRm@4PXD9o6e?cW87gJ81
@@ -26,7 +26,7 @@ Z5 OV;L;10.6d;65
 r1
 !s85 0
 31
-Z6 !s108 1568828319.000000
+Z6 !s108 1568829176.000000
 Z7 !s107 armario.sv|historiador.sv|teste.sv|register.sv|ramOnChip64.v|ramOnChip32.v|mux4.sv|mux.sv|Memoria64.sv|Memoria32.sv|extensor.sv|Deslocamento.sv|cpu.sv|control.sv|bancoReg.sv|
 Z8 !s90 -reportprogress|300|-f|modulizada|
 !i113 1
@@ -184,13 +184,13 @@ VzgO8gWh_:1J3Q7IMD_6361
 !s100 HF;HEc4<o>]o3`Jjc=WPJ2
 Z14 OV;C;10.6d;65
 32
-R2
+Z15 !s110 1568829177
 !i10b 1
 R6
-Z15 !s90 -reportprogress|300|-f|vhdlzada|
+Z16 !s90 -reportprogress|300|-f|vhdlzada|
 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
 !i113 1
-Z16 tExplicit 1 CvgOpt 0
+Z17 tExplicit 1 CvgOpt 0
 Abehavioral_arch
 R10
 R11
@@ -201,13 +201,13 @@ Vm]9:ocK@DX0U7ei8f63dc3
 !s100 e?bWG@:SnkVC476;`5UQ[1
 R14
 32
-R2
+R15
 !i10b 1
 R6
-R15
-Z17 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
-!i113 1
 R16
+Z18 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
+!i113 1
+R17
 vMemoria32
 R1
 R2
@@ -221,7 +221,7 @@ R0
 R4
 8Memoria32.sv
 FMemoria32.sv
-Z18 L0 26
+Z19 L0 26
 R5
 r1
 !s85 0
@@ -245,7 +245,7 @@ R0
 R4
 8Memoria64.sv
 FMemoria64.sv
-R18
+R19
 R5
 r1
 !s85 0
@@ -312,7 +312,7 @@ R0
 R4
 8ramOnChip32.v
 FramOnChip32.v
-Z19 L0 40
+Z20 L0 40
 R5
 r1
 !s85 0
@@ -333,7 +333,7 @@ R0
 R4
 8ramOnChip64.v
 FramOnChip64.v
-R19
+R20
 R5
 r1
 !s85 0
@@ -392,12 +392,12 @@ R8
 R9
 Eula64
 R4
-Z20 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z21 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R10
 R11
 R0
-Z21 8ula64.vhd
-Z22 Fula64.vhd
+Z22 8ula64.vhd
+Z23 Fula64.vhd
 l0
 L54
 VA[hKfbX3SC@81eT`QAGTa0
@@ -407,12 +407,12 @@ R14
 R2
 !i10b 1
 R6
-R15
-R17
-!i113 1
 R16
+R18
+!i113 1
+R17
 Abehavioral
-R20
+R21
 R10
 R11
 DEx4 work 5 ula64 0 22 A[hKfbX3SC@81eT`QAGTa0
@@ -422,10 +422,10 @@ VhfEl9:QZEFEbFol]kmfg;2
 !s100 Uo0k;32icCU`;=z7SXnK`2
 R14
 32
-R2
+R15
 !i10b 1
 R6
-R15
-R17
-!i113 1
 R16
+R18
+!i113 1
+R17
