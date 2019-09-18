@@ -13,7 +13,7 @@ module control (
 	output logic AluOutWrite, pcWriteCondBne,
 	output logic [1:0]SeletorShift,
 	output logic pcWriteCondBge, logic pcWriteCondBlt,
-	output logic [4:0]HistSel
+	output logic [4:0]HistSel, [1:0]selDataMem, [2:0]selMuxMem
 );
 	logic [5:0]state;
 	logic [5:0]next_state;
@@ -26,6 +26,9 @@ module control (
 			state = next_state;
 	end
 	always_comb begin
+		if(state == 40) begin
+			next_state = 40;
+		end
 		if(state == 32) begin
 			call_state = 1;
 			next_state = 0;
@@ -81,8 +84,14 @@ module control (
 			ALUOp = 1;
 			AluOutWrite = 1;
 			call_state = 1;
-			
+
 			next_state = 1;
+			if(Instruction[31:0] == 32'b00000000000100000000000001110011) begin
+				next_state = 40;
+			end
+			if(Instruction[31:0] == 32'b00000000000000000000000000010011) begin
+				next_state = 1;
+			end
 			if(Instruction[6:0] == 7'b1101111) begin //JAL
 				next_state = 22;
 			end
@@ -117,11 +126,12 @@ module control (
 					next_state = 15;
 				end
 			end
-			if(Instruction[6:0] == 7'b0000011) begin //LD
+			if(Instruction[6:0] == 7'b0000011) begin //Load
 				next_state = 6;
 			end
-			if(Instruction[6:0] == 7'b0100011) begin //SD
-				if(Instruction[14:12] == 3'b111) begin	
+			if(Instruction[6:0] == 7'b0100011) begin //Store
+				next_state = 33;
+				if(Instruction[14:12] == 3'b111) begin //SD
 					next_state = 9;
 				end
 			end
@@ -228,7 +238,7 @@ module control (
 		end
 		if(state == 9) begin //sd
 			extensorSignal = 1;
-
+			selMuxMem = 1;
 			MuxAlu1Sel = 1;
 			Mux4Sel = 2;
 			ALUOp = 1;
@@ -460,6 +470,56 @@ module control (
 
 			call_state = 1;
 
+			next_state = 0;
+		end
+		if(state == 33) begin //SW/SH/SB
+			MuxAlu1Sel = 1;
+			Mux4Sel = 3;
+			extensorSignal = 1;
+			ALUOp = 1;
+			DMemRead = 0;
+
+			next_state = 34;
+		end
+		if(state == 34) begin
+			LoadMDR = 1;
+
+			if(Instruction[14:12] == 3'b010) begin
+				call_state = 35;
+			end
+			if(Instruction[14:12] == 3'b001) begin
+				call_state = 36;
+			end
+			if(Instruction[14:12] == 3'b000) begin
+				call_state = 37;
+			end
+			next_state = 0;
+		end
+		if(state == 35) begin //SW
+			selDataMem = 0;
+			selMuxMem = 0;
+			DMemRead = 1;
+
+			call_state = 1;
+
+			next_state = 0;
+		end
+		if(state == 36) begin //SH
+			selDataMem = 1;
+			selMuxMem = 0;
+			DMemRead = 1;
+
+			call_state = 1;
+			
+			next_state = 0;
+		end
+		if(state == 37) begin //SB
+			selDataMem = 2;
+			selMuxMem = 0;
+			DMemRead = 1;
+
+			call_state = 1;
+			
 			next_state = 0;
 		end
 	end

@@ -12,3 +12,4 @@ ramOnChip64.v
 register.sv
 teste.sv
 historiador.sv
+armario.sv
