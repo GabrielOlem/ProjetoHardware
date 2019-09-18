@@ -474,7 +474,7 @@ module control (
 		end
 		if(state == 33) begin //SW/SH/SB
 			MuxAlu1Sel = 1;
-			Mux4Sel = 3;
+			Mux4Sel = 2;
 			extensorSignal = 1;
 			ALUOp = 1;
 			DMemRead = 0;

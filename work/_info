@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/gme/Desktop/ProjetoHardware
 varmario
 Z1 DXx6 sv_std 3 std 0 22 ;edk3;YfCLjCm[Hd=`UGQ2
-Z2 !s110 1568811494
+Z2 !s110 1568819193
 !i10b 1
 !s100 <I]2>F^T>^m3KYI25KTdf3
 IglRm@4PXD9o6e?cW87gJ81
@@ -26,7 +26,7 @@ Z4 OV;L;10.6d;65
 r1
 !s85 0
 31
-Z5 !s108 1568811494.000000
+Z5 !s108 1568819193.000000
 Z6 !s107 armario.sv|historiador.sv|teste.sv|register.sv|ramOnChip64.v|ramOnChip32.v|mux4.sv|mux.sv|Memoria64.sv|Memoria32.sv|extensor.sv|Deslocamento.sv|cpu.sv|control.sv|bancoReg.sv|
 Z7 !s90 -reportprogress|300|-f|modulizada|
 !i113 1
@@ -59,13 +59,13 @@ vcontrol
 R1
 R2
 !i10b 1
-!s100 a=@K0CiZ@0JE1Fb5>bnKA3
-Id0gmJHC5XkP5i[W;0Oec43
+!s100 2l34HTDVdBIICGP@7^QjX3
+I_5]E]V_25]1@NPfXY?0ca1
 R3
 !s105 control_sv_unit
 S1
 R0
-w1568811376
+w1568819188
 8control.sv
 Fcontrol.sv
 L0 2
@@ -184,13 +184,13 @@ VzgO8gWh_:1J3Q7IMD_6361
 !s100 HF;HEc4<o>]o3`Jjc=WPJ2
 Z14 OV;C;10.6d;65
 32
-Z15 !s110 1568811495
+Z15 !s110 1568819194
 !i10b 1
-Z16 !s108 1568811495.000000
-Z17 !s90 -reportprogress|300|-f|vhdlzada|
+R5
+Z16 !s90 -reportprogress|300|-f|vhdlzada|
 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
 !i113 1
-Z18 tExplicit 1 CvgOpt 0
+Z17 tExplicit 1 CvgOpt 0
 Abehavioral_arch
 R10
 R11
@@ -203,11 +203,11 @@ R14
 32
 R15
 !i10b 1
+R5
 R16
-R17
-Z19 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
+Z18 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
 !i113 1
-R18
+R17
 vMemoria32
 R1
 R2
@@ -221,7 +221,7 @@ R0
 R9
 8Memoria32.sv
 FMemoria32.sv
-Z20 L0 26
+Z19 L0 26
 R4
 r1
 !s85 0
@@ -245,7 +245,7 @@ R0
 R9
 8Memoria64.sv
 FMemoria64.sv
-R20
+R19
 R4
 r1
 !s85 0
@@ -312,7 +312,7 @@ R0
 R9
 8ramOnChip32.v
 FramOnChip32.v
-Z21 L0 40
+Z20 L0 40
 R4
 r1
 !s85 0
@@ -333,7 +333,7 @@ R0
 R9
 8ramOnChip64.v
 FramOnChip64.v
-R21
+R20
 R4
 r1
 !s85 0
@@ -392,12 +392,12 @@ R7
 R8
 Eula64
 R9
-Z22 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z21 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R10
 R11
 R0
-Z23 8ula64.vhd
-Z24 Fula64.vhd
+Z22 8ula64.vhd
+Z23 Fula64.vhd
 l0
 L54
 VA[hKfbX3SC@81eT`QAGTa0
@@ -406,13 +406,13 @@ R14
 32
 R15
 !i10b 1
+R5
 R16
-R17
-R19
-!i113 1
 R18
+!i113 1
+R17
 Abehavioral
-R22
+R21
 R10
 R11
 DEx4 work 5 ula64 0 22 A[hKfbX3SC@81eT`QAGTa0
@@ -424,8 +424,8 @@ R14
 32
 R15
 !i10b 1
+R5
 R16
-R17
-R19
-!i113 1
 R18
+!i113 1
+R17
