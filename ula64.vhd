@@ -87,7 +87,7 @@ architecture behavioral of Ula64 is
 			  			(A and B)  	when "011",	-- AND
 			  			(A xor B) 	when "110", -- A XOR B              
               			not(A)     	when "101",	-- NOT A
-			  			soma_temp  	when "100",	-- INCREMENTO			  
+			  			soma_temp  	when "100",	-- INCREMENTO	  
              			"0000000000000000000000000000000000000000000000000000000000000000" when others;  	-- NAO DEFINIDO
 			
 			S <= s_temp;

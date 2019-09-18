@@ -1,75 +1,18 @@
-C:/Users/gme/Desktop/ProjetoHardware/ramOnChip32.v {1 {vlog -work work -stats=none C:/Users/gme/Desktop/ProjetoHardware/ramOnChip32.v
+C:/Users/jpspm/Desktop/ProjetoHardware/mux.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/mux.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module ramOnChip32
+-- Compiling module mux
 
 Top level modules:
-	ramOnChip32
+	mux
 
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/armario.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/armario.sv
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/armario.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/armario.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module armario
 
 Top level modules:
 	armario
 
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/teste.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/teste.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module teste
-
-Top level modules:
-	teste
-
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/register.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/register.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module register
-
-Top level modules:
-	register
-
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/mux4.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/mux4.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module mux4
-
-Top level modules:
-	mux4
-
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/Memoria32.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/Memoria32.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module Memoria32
-
-Top level modules:
-	Memoria32
-
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/extensor.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/extensor.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module extensor
-
-Top level modules:
-	extensor
-
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/bancoReg.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/bancoReg.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module bancoReg
-
-Top level modules:
-	bancoReg
-
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/Instr_Reg_RISC_V.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/gme/Desktop/ProjetoHardware/Instr_Reg_RISC_V.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity Instr_Reg_RISC_V
--- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
-
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/Memoria64.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/Memoria64.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module Memoria64
-
-Top level modules:
-	Memoria64
-
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/ula64.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/gme/Desktop/ProjetoHardware/ula64.vhd
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/ula64.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/ula64.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -78,32 +21,89 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 2
 -- Compiling entity Ula64
 -- Compiling architecture behavioral of Ula64
 
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/Deslocamento.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/Deslocamento.sv
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/teste.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/teste.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module teste
+
+Top level modules:
+	teste
+
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/Deslocamento.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/Deslocamento.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module Deslocamento
 
 Top level modules:
 	Deslocamento
 
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/ramOnChip64.v {1 {vlog -work work -stats=none C:/Users/gme/Desktop/ProjetoHardware/ramOnChip64.v
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/Memoria32.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/Memoria32.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Memoria32
+
+Top level modules:
+	Memoria32
+
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/ramOnChip64.v {1 {vlog -work work -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/ramOnChip64.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module ramOnChip64
 
 Top level modules:
 	ramOnChip64
 
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/historiador.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/historiador.sv
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/ramOnChip32.v {1 {vlog -work work -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/ramOnChip32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module ramOnChip32
+
+Top level modules:
+	ramOnChip32
+
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/Instr_Reg_RISC_V.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/Instr_Reg_RISC_V.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Instr_Reg_RISC_V
+-- Compiling architecture behavioral_arch of Instr_Reg_RISC_V
+
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/Memoria64.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/Memoria64.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Memoria64
+
+Top level modules:
+	Memoria64
+
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/register.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/register.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/mux4.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/mux4.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/historiador.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/historiador.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module historiador
 
 Top level modules:
 	historiador
 
-} {} {}} C:/Users/gme/Desktop/ProjetoHardware/mux.sv {1 {vlog -work work -sv -stats=none C:/Users/gme/Desktop/ProjetoHardware/mux.sv
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/extensor.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/extensor.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module mux
+-- Compiling module extensor
 
 Top level modules:
-	mux
+	extensor
+
+} {} {}} C:/Users/jpspm/Desktop/ProjetoHardware/bancoReg.sv {1 {vlog -work work -sv -stats=none C:/Users/jpspm/Desktop/ProjetoHardware/bancoReg.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module bancoReg
+
+Top level modules:
+	bancoReg
 
 } {} {}}

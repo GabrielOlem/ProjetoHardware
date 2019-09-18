@@ -40,5 +40,8 @@ module extensor(input logic [31:0]entrada, output logic [63:0]saida, input logic
 				saida = {43'b1111111111111111111111111111111111111111111, entrada[31], entrada[19:12], entrada[20], entrada[30:21], 1'b0};
 			end
 		end
+		if(sel == 5) begin
+			saida = {48'b0, entrada[7:0]};
+		end
 	end
 endmodule

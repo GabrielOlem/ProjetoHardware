@@ -4,7 +4,7 @@ module control (
 	input logic clk,    
 	input logic reset,
 	output logic [3:0]extensorSignal,
-	output logic pcWrite, logic PCWriteCond,  logic pcSource, 
+	output logic pcWrite, logic PCWriteCond,  logic [2:0]pcSource, 
 	output logic [2:0]MuxDataSel, logic [2:0]Mux4Sel,
 	output logic MuxAlu1Sel, 
 	output logic DMemRead, logic IMemRead, logic LoadMDR,
@@ -13,7 +13,8 @@ module control (
 	output logic AluOutWrite, logic pcWriteCondBne,
 	output logic [1:0]SeletorShift,
 	output logic pcWriteCondBge, logic pcWriteCondBlt,
-	output logic [4:0]HistSel, logic [1:0]selDataMem, logic [2:0]selMuxMem
+	output logic [4:0]HistSel, logic [1:0]selDataMem, logic [2:0]selMuxMem,
+	output logic noOpcode, logic [2:0]MuxAddress, logic [3:0]memSel
 );
 	logic [5:0]state;
 	logic [5:0]next_state;
@@ -26,7 +27,27 @@ module control (
 			state = next_state;
 	end
 	always_comb begin
-		if(state == 40) begin
+		if(state == 45) begin //OPCODE inexistente
+			MuxAlu1Sel = 0;
+			Mux4Sel = 1;
+			ALUOp = 2;
+			noOpcode = 1;
+
+			MuxAddress = 1;
+			DMemRead = 0;
+			memSel = 5;
+			
+			next_state = 46;
+		end
+		if(state == 46) begin
+			pcSource = 2;
+			pcWrite = 1;
+
+			call_state = 1;
+
+			next_state = 0;
+		end
+		if(state == 40) begin //break
 			next_state = 40;
 		end
 		if(state == 32) begin
@@ -34,6 +55,7 @@ module control (
 			next_state = 0;
 		end
 		if(state == 0) begin //Faz nada
+			noOpcode = 0;
 			PCWriteCond = 0;
 			pcWriteCondBne = 0;
 			pcWriteCondBge = 0;
@@ -52,6 +74,7 @@ module control (
 			Load_ir = 0;
 			
 			LoadMDR = 0;
+			MuxAddress = 0;
 			DMemRead = 0;
 			IMemRead = 0;
 
@@ -83,13 +106,14 @@ module control (
 			Mux4Sel = 3;
 			ALUOp = 1;
 			AluOutWrite = 1;
+			
 			call_state = 1;
 
-			next_state = 1;
-			if(Instruction[31:0] == 32'b00000000000100000000000001110011) begin
+			next_state = 45;
+			if(Instruction[31:0] == 32'b00000000000100000000000001110011) begin //break
 				next_state = 40;
 			end
-			if(Instruction[31:0] == 32'b00000000000000000000000000010011) begin
+			if(Instruction[31:0] == 32'b00000000000000000000000000010011) begin //nop
 				next_state = 1;
 			end
 			if(Instruction[6:0] == 7'b1101111) begin //JAL
@@ -195,7 +219,8 @@ module control (
 			MuxAlu1Sel = 1;
 			Mux4Sel = 2;
 			ALUOp = 1;
-			
+
+			MuxAddress = 0;
 			DMemRead = 0;
 
 			next_state = 7;
@@ -242,6 +267,7 @@ module control (
 			next_state = 10;
 		end
 		if(state == 10) begin
+			MuxAddress = 0;
 			DMemRead = 1;
 			call_state = 1;
 			next_state = 0;
@@ -474,7 +500,7 @@ module control (
 			extensorSignal = 1;
 			ALUOp = 1;
 			DMemRead = 0;
-
+			MuxAddress = 0;
 			next_state = 34;
 		end
 		if(state == 34) begin
@@ -493,7 +519,7 @@ module control (
 			selDataMem = 0;
 			selMuxMem = 0;
 			DMemRead = 1;
-
+			MuxAddress = 0;
 			call_state = 1;
 
 			next_state = 0;
@@ -502,7 +528,7 @@ module control (
 			selDataMem = 1;
 			selMuxMem = 0;
 			DMemRead = 1;
-
+			MuxAddress = 0;
 			call_state = 1;
 			
 			next_state = 0;
@@ -511,7 +537,7 @@ module control (
 			selDataMem = 2;
 			selMuxMem = 0;
 			DMemRead = 1;
-
+			MuxAddress = 0;
 			call_state = 1;
 			
 			next_state = 0;

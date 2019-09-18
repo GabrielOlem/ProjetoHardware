@@ -7,10 +7,10 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/gme/Desktop/ProjetoHardware
+Z0 dC:/Users/jpspm/Desktop/ProjetoHardware
 varmario
 Z1 DXx6 sv_std 3 std 0 22 ;edk3;YfCLjCm[Hd=`UGQ2
-Z2 !s110 1568829176
+Z2 !s110 1568845136
 !i10b 1
 !s100 <I]2>F^T>^m3KYI25KTdf3
 IglRm@4PXD9o6e?cW87gJ81
@@ -18,7 +18,7 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 armario_sv_unit
 S1
 R0
-Z4 w1568823032
+Z4 w1568839022
 8armario.sv
 Farmario.sv
 L0 1
@@ -26,7 +26,7 @@ Z5 OV;L;10.6d;65
 r1
 !s85 0
 31
-Z6 !s108 1568829176.000000
+Z6 !s108 1568845136.000000
 Z7 !s107 armario.sv|historiador.sv|teste.sv|register.sv|ramOnChip64.v|ramOnChip32.v|mux4.sv|mux.sv|Memoria64.sv|Memoria32.sv|extensor.sv|Deslocamento.sv|cpu.sv|control.sv|bancoReg.sv|
 Z8 !s90 -reportprogress|300|-f|modulizada|
 !i113 1
@@ -59,13 +59,13 @@ vcontrol
 R1
 R2
 !i10b 1
-!s100 DEfHd^HW2;g58cDWNSall1
-I]0InHe`VnhlZh9Sn10C@E3
+!s100 Cn59AUJ@IdIifUgzeoWS42
+Im>V4b6jF8XYX<:zDn;<W?3
 R3
 !s105 control_sv_unit
 S1
 R0
-w1568827904
+w1568845131
 8control.sv
 Fcontrol.sv
 L0 2
@@ -82,13 +82,13 @@ vcpu
 R1
 R2
 !i10b 1
-!s100 7[m[Mz2CXcD6>o8aH=]Gd2
-I3XXXZ]bX7E7G4LXCNcVij1
+!s100 37a@gPKG3BkTV_?UW86]a2
+IDaWSVgoH;cjZW@Ulj<j]C3
 R3
 !s105 cpu_sv_unit
 S1
 R0
-w1568824489
+w1568845078
 8cpu.sv
 Fcpu.sv
 L0 1
@@ -129,13 +129,13 @@ vextensor
 R1
 R2
 !i10b 1
-!s100 2hIP=]i2[^G2XYA71`1G?2
-If^^EhUcCCPGBIDz4Xkn=A1
+!s100 W[L7]CYPQ8R4[0UYS51=M3
+I^Da157GW[WRK9RNmzATf;2
 R3
 !s105 extensor_sv_unit
 S1
 R0
-R4
+w1568842875
 8extensor.sv
 Fextensor.sv
 L0 1
@@ -184,7 +184,7 @@ VzgO8gWh_:1J3Q7IMD_6361
 !s100 HF;HEc4<o>]o3`Jjc=WPJ2
 Z14 OV;C;10.6d;65
 32
-Z15 !s110 1568829177
+Z15 !s110 1568845137
 !i10b 1
 R6
 Z16 !s90 -reportprogress|300|-f|vhdlzada|
@@ -391,20 +391,20 @@ R8
 !i113 1
 R9
 Eula64
-R4
-Z21 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z21 w1568842720
+Z22 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R10
 R11
 R0
-Z22 8ula64.vhd
-Z23 Fula64.vhd
+Z23 8ula64.vhd
+Z24 Fula64.vhd
 l0
 L54
 VA[hKfbX3SC@81eT`QAGTa0
 !s100 gXP0QOjWED7GdgGCHP44]0
 R14
 32
-R2
+R15
 !i10b 1
 R6
 R16
@@ -412,7 +412,7 @@ R18
 !i113 1
 R17
 Abehavioral
-R21
+R22
 R10
 R11
 DEx4 work 5 ula64 0 22 A[hKfbX3SC@81eT`QAGTa0
