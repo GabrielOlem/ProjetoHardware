@@ -11,3 +11,4 @@ ramOnChip32.v
 ramOnChip64.v
 register.sv
 teste.sv
+historiador.sv
