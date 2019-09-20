@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/gme/Desktop/ProjetoHardware
 varmario
 Z1 DXx6 sv_std 3 std 0 22 ;edk3;YfCLjCm[Hd=`UGQ2
-Z2 !s110 1568991061
+Z2 !s110 1568991775
 !i10b 1
 !s100 <I]2>F^T>^m3KYI25KTdf3
 IglRm@4PXD9o6e?cW87gJ81
@@ -26,14 +26,14 @@ Z5 OV;L;10.6d;65
 r1
 !s85 0
 31
-Z6 !s108 1568991060.000000
+Z6 !s108 1568991775.000000
 Z7 !s107 armario.sv|historiador.sv|teste.sv|register.sv|ramOnChip64.v|ramOnChip32.v|mux4.sv|mux.sv|Memoria64.sv|Memoria32.sv|extensor.sv|Deslocamento.sv|cpu.sv|control.sv|bancoReg.sv|
 Z8 !s90 -reportprogress|300|-f|modulizada|
 !i113 1
 Z9 tCvgOpt 0
 vbancoReg
 R1
-Z10 !s110 1568991060
+R2
 !i10b 1
 !s100 a:<nhKC@mWB[nDSoijJPm3
 I`MOnE05dQ1@`[Y_O[A[=11
@@ -57,7 +57,7 @@ R9
 nbanco@reg
 vcontrol
 R1
-R10
+R2
 !i10b 1
 !s100 HA7j<[YF534nTOni6dOel1
 IE<gfNFThRJg^Q9j5CzL6o2
@@ -65,7 +65,7 @@ R3
 !s105 control_sv_unit
 S1
 R0
-w1568990067
+w1568991603
 8control.sv
 Fcontrol.sv
 L0 2
@@ -80,7 +80,7 @@ R8
 R9
 vcpu
 R1
-R10
+R2
 !i10b 1
 !s100 KNCVFIcCWZ19EFJTi^<f72
 ISL`VnOS75KeC2S9mT:L]G3
@@ -103,7 +103,7 @@ R8
 R9
 vDeslocamento
 R1
-R10
+R2
 !i10b 1
 !s100 EMH`UB_G1bTeiVdfJ^^>l1
 InE0bLM7_f`2Pfna4BUZW_2
@@ -127,7 +127,7 @@ R9
 n@deslocamento
 vextensor
 R1
-R10
+R2
 !i10b 1
 !s100 W[L7]CYPQ8R4[0UYS51=M3
 I^Da157GW[WRK9RNmzATf;2
@@ -158,7 +158,7 @@ R3
 !s105 historiador_sv_unit
 S1
 R0
-Z11 w1568979921
+Z10 w1568979921
 8historiador.sv
 Fhistoriador.sv
 L0 1
@@ -173,44 +173,44 @@ R8
 R9
 Einstr_reg_risc_v
 R4
-Z12 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z13 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z11 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z12 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z14 8Instr_Reg_RISC_V.vhd
-Z15 FInstr_Reg_RISC_V.vhd
+Z13 8Instr_Reg_RISC_V.vhd
+Z14 FInstr_Reg_RISC_V.vhd
 l0
 L49
 VzgO8gWh_:1J3Q7IMD_6361
 !s100 HF;HEc4<o>]o3`Jjc=WPJ2
-Z16 OV;C;10.6d;65
+Z15 OV;C;10.6d;65
 32
-R2
+Z16 !s110 1568991776
 !i10b 1
-Z17 !s108 1568991061.000000
-Z18 !s90 -reportprogress|300|-f|vhdlzada|
+R6
+Z17 !s90 -reportprogress|300|-f|vhdlzada|
 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
 !i113 1
-Z19 tExplicit 1 CvgOpt 0
+Z18 tExplicit 1 CvgOpt 0
 Abehavioral_arch
+R11
 R12
-R13
 DEx4 work 16 instr_reg_risc_v 0 22 zgO8gWh_:1J3Q7IMD_6361
 l68
 L65
 Vm]9:ocK@DX0U7ei8f63dc3
 !s100 e?bWG@:SnkVC476;`5UQ[1
-R16
+R15
 32
-R2
+R16
 !i10b 1
+R6
 R17
-R18
-Z20 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
+Z19 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
 !i113 1
-R19
+R18
 vMemoria32
 R1
-R10
+R2
 !i10b 1
 !s100 Q2gmKA>Pd1H;3=f[e^lb[3
 I115geINjKebGNcL<?>K<X1
@@ -221,7 +221,7 @@ R0
 R4
 8Memoria32.sv
 FMemoria32.sv
-Z21 L0 26
+Z20 L0 26
 R5
 r1
 !s85 0
@@ -234,7 +234,7 @@ R9
 n@memoria32
 vMemoria64
 R1
-R10
+R2
 !i10b 1
 !s100 1fz3Mgbi`W1QjWk]9CgUO3
 I^?H2gZ;TW^1aQMHUQjIJN1
@@ -245,7 +245,7 @@ R0
 R4
 8Memoria64.sv
 FMemoria64.sv
-R21
+R20
 R5
 r1
 !s85 0
@@ -266,7 +266,7 @@ R3
 !s105 mux_sv_unit
 S1
 R0
-R11
+R10
 8mux.sv
 Fmux.sv
 L0 1
@@ -289,7 +289,7 @@ R3
 !s105 mux4_sv_unit
 S1
 R0
-R11
+R10
 8mux4.sv
 Fmux4.sv
 L0 1
@@ -309,10 +309,10 @@ R2
 IOOLMj_cg_N:74eHXMeQLm3
 R3
 R0
-R11
+R10
 8ramOnChip32.v
 FramOnChip32.v
-Z22 L0 40
+Z21 L0 40
 R5
 r1
 !s85 0
@@ -330,10 +330,10 @@ R2
 I5Bnob:67XieXOZhhzR6A22
 R3
 R0
-R11
+R10
 8ramOnChip64.v
 FramOnChip64.v
-R22
+R21
 R5
 r1
 !s85 0
@@ -354,7 +354,7 @@ R3
 !s105 register_sv_unit
 S1
 R0
-R11
+R10
 8register.sv
 Fregister.sv
 L0 1
@@ -377,7 +377,7 @@ R3
 !s105 teste_sv_unit
 S1
 R0
-R11
+R10
 8teste.sv
 Fteste.sv
 L0 3
@@ -391,41 +391,41 @@ R8
 !i113 1
 R9
 Eula64
+R10
+Z22 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R11
-Z23 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R12
-R13
 R0
-Z24 8ula64.vhd
-Z25 Fula64.vhd
+Z23 8ula64.vhd
+Z24 Fula64.vhd
 l0
 L54
 VA[hKfbX3SC@81eT`QAGTa0
 !s100 gXP0QOjWED7GdgGCHP44]0
-R16
+R15
 32
-R2
+R16
 !i10b 1
+R6
 R17
-R18
-R20
-!i113 1
 R19
+!i113 1
+R18
 Abehavioral
-R23
+R22
+R11
 R12
-R13
 DEx4 work 5 ula64 0 22 A[hKfbX3SC@81eT`QAGTa0
 l80
 L70
 VhfEl9:QZEFEbFol]kmfg;2
 !s100 Uo0k;32icCU`;=z7SXnK`2
-R16
+R15
 32
-R2
+R16
 !i10b 1
+R6
 R17
-R18
-R20
-!i113 1
 R19
+!i113 1
+R18
