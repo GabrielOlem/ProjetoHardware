@@ -7,10 +7,10 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/gme/Desktop/ProjetoHardware
+Z0 dC:/Users/GODZILA/Desktop/ProjetoHardware
 varmario
 Z1 DXx6 sv_std 3 std 0 22 ;edk3;YfCLjCm[Hd=`UGQ2
-Z2 !s110 1568991775
+Z2 !s110 1569021356
 !i10b 1
 !s100 <I]2>F^T>^m3KYI25KTdf3
 IglRm@4PXD9o6e?cW87gJ81
@@ -18,7 +18,7 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 armario_sv_unit
 S1
 R0
-Z4 w1568979920
+Z4 w1569550539
 8armario.sv
 Farmario.sv
 L0 1
@@ -26,7 +26,7 @@ Z5 OV;L;10.6d;65
 r1
 !s85 0
 31
-Z6 !s108 1568991775.000000
+Z6 !s108 1569021356.000000
 Z7 !s107 armario.sv|historiador.sv|teste.sv|register.sv|ramOnChip64.v|ramOnChip32.v|mux4.sv|mux.sv|Memoria64.sv|Memoria32.sv|extensor.sv|Deslocamento.sv|cpu.sv|control.sv|bancoReg.sv|
 Z8 !s90 -reportprogress|300|-f|modulizada|
 !i113 1
@@ -41,7 +41,7 @@ R3
 !s105 bancoReg_sv_unit
 S1
 R0
-R4
+Z10 w1568423062
 8bancoReg.sv
 FbancoReg.sv
 L0 1
@@ -59,13 +59,13 @@ vcontrol
 R1
 R2
 !i10b 1
-!s100 HA7j<[YF534nTOni6dOel1
-IE<gfNFThRJg^Q9j5CzL6o2
+!s100 ]coQ1=OEVK3zXY^:l<GWH2
+I5>fml^d9UEFoANm<k[Ym32
 R3
 !s105 control_sv_unit
 S1
 R0
-w1568991603
+w1569021279
 8control.sv
 Fcontrol.sv
 L0 2
@@ -88,7 +88,7 @@ R3
 !s105 cpu_sv_unit
 S1
 R0
-w1568989091
+R4
 8cpu.sv
 Fcpu.sv
 L0 1
@@ -111,7 +111,7 @@ R3
 !s105 Deslocamento_sv_unit
 S1
 R0
-R4
+R10
 8Deslocamento.sv
 FDeslocamento.sv
 L0 1
@@ -158,7 +158,7 @@ R3
 !s105 historiador_sv_unit
 S1
 R0
-Z10 w1568979921
+R4
 8historiador.sv
 Fhistoriador.sv
 L0 1
@@ -172,7 +172,7 @@ R8
 !i113 1
 R9
 Einstr_reg_risc_v
-R4
+R10
 Z11 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z12 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
@@ -184,13 +184,13 @@ VzgO8gWh_:1J3Q7IMD_6361
 !s100 HF;HEc4<o>]o3`Jjc=WPJ2
 Z15 OV;C;10.6d;65
 32
-Z16 !s110 1568991776
+R2
 !i10b 1
 R6
-Z17 !s90 -reportprogress|300|-f|vhdlzada|
+Z16 !s90 -reportprogress|300|-f|vhdlzada|
 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
 !i113 1
-Z18 tExplicit 1 CvgOpt 0
+Z17 tExplicit 1 CvgOpt 0
 Abehavioral_arch
 R11
 R12
@@ -201,13 +201,13 @@ Vm]9:ocK@DX0U7ei8f63dc3
 !s100 e?bWG@:SnkVC476;`5UQ[1
 R15
 32
-R16
+R2
 !i10b 1
 R6
-R17
-Z19 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
+R16
+Z18 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
 !i113 1
-R18
+R17
 vMemoria32
 R1
 R2
@@ -218,10 +218,10 @@ R3
 !s105 Memoria32_sv_unit
 S1
 R0
-R4
+R10
 8Memoria32.sv
 FMemoria32.sv
-Z20 L0 26
+Z19 L0 26
 R5
 r1
 !s85 0
@@ -242,10 +242,10 @@ R3
 !s105 Memoria64_sv_unit
 S1
 R0
-R4
+R10
 8Memoria64.sv
 FMemoria64.sv
-R20
+R19
 R5
 r1
 !s85 0
@@ -289,7 +289,7 @@ R3
 !s105 mux4_sv_unit
 S1
 R0
-R10
+R4
 8mux4.sv
 Fmux4.sv
 L0 1
@@ -312,7 +312,7 @@ R0
 R10
 8ramOnChip32.v
 FramOnChip32.v
-Z21 L0 40
+Z20 L0 40
 R5
 r1
 !s85 0
@@ -333,7 +333,7 @@ R0
 R10
 8ramOnChip64.v
 FramOnChip64.v
-R21
+R20
 R5
 r1
 !s85 0
@@ -391,28 +391,28 @@ R8
 !i113 1
 R9
 Eula64
-R10
-Z22 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R4
+Z21 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R11
 R12
 R0
-Z23 8ula64.vhd
-Z24 Fula64.vhd
+Z22 8ula64.vhd
+Z23 Fula64.vhd
 l0
 L54
 VA[hKfbX3SC@81eT`QAGTa0
 !s100 gXP0QOjWED7GdgGCHP44]0
 R15
 32
-R16
+R2
 !i10b 1
 R6
-R17
-R19
-!i113 1
+R16
 R18
+!i113 1
+R17
 Abehavioral
-R22
+R21
 R11
 R12
 DEx4 work 5 ula64 0 22 A[hKfbX3SC@81eT`QAGTa0
@@ -422,10 +422,10 @@ VhfEl9:QZEFEbFol]kmfg;2
 !s100 Uo0k;32icCU`;=z7SXnK`2
 R15
 32
-R16
+R2
 !i10b 1
 R6
-R17
-R19
-!i113 1
+R16
 R18
+!i113 1
+R17

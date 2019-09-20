@@ -392,7 +392,7 @@ module control (
 		end
 		if(state == 18) begin
 			Mux4Sel = 2;
-			MuxAlu1Sel = 0;
+			MuxAlu1Sel = 1;
 			ALUOp = 1;
 			pcSource = 0;
 			pcWrite = 1;
