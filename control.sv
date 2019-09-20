@@ -14,7 +14,8 @@ module control (
 	output logic [1:0]SeletorShift,
 	output logic pcWriteCondBge, logic pcWriteCondBlt,
 	output logic [4:0]HistSel, logic [1:0]selDataMem, logic [2:0]selMuxMem,
-	output logic noOpcode, logic [2:0]MuxAddress, logic [3:0]memSel
+	output logic noOpcode, logic [2:0]MuxAddress, logic [3:0]memSel, 
+	input logic Overflow
 );
 	logic [5:0]state;
 	logic [5:0]next_state;
@@ -46,6 +47,18 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+		end
+		if(state == 47) begin //Overflow
+			MuxAlu1Sel = 0;
+			Mux4Sel = 1;
+			ALUOp = 2;
+			noOpcode = 1;
+
+			MuxAddress = 2;
+			DMemRead = 0;
+			memSel = 5;
+
+			next_state = 46;
 		end
 		if(state == 40) begin //break
 			next_state = 40;
@@ -193,6 +206,9 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 4) begin //add
 			MuxAlu1Sel = 1;
@@ -203,6 +219,9 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 5) begin //sub
 			MuxAlu1Sel = 1;
@@ -213,17 +232,23 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 6) begin //load
 			extensorSignal = 0;
 			MuxAlu1Sel = 1;
 			Mux4Sel = 2;
 			ALUOp = 1;
-
+			
 			MuxAddress = 0;
 			DMemRead = 0;
 
 			next_state = 7;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 7) begin
 			LoadMDR = 1;
@@ -263,8 +288,10 @@ module control (
 			MuxAlu1Sel = 1;
 			Mux4Sel = 2;
 			ALUOp = 1;
-
 			next_state = 10;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 10) begin
 			MuxAddress = 0;
@@ -284,6 +311,9 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 12) begin //bne
 			MuxAlu1Sel = 1;
@@ -296,6 +326,9 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 13) begin //lui
 			extensorSignal = 3;
@@ -327,6 +360,9 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 16) begin //slti a alu ta retornando a flag errada
 			extensorSignal = 0;
@@ -339,6 +375,9 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end 
 		if(state == 17) begin //jalr
 			MuxAlu1Sel = 0;
@@ -361,6 +400,9 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 19) begin //srli
 			MuxAlu1Sel = 1;
@@ -416,6 +458,9 @@ module control (
 			call_state = 1;
 			
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 24) begin //bge
 			MuxAlu1Sel = 1;
@@ -427,6 +472,9 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 25) begin //blt
 			MuxAlu1Sel = 1;
@@ -439,6 +487,9 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 26) begin //lb
 			MuxDataSel = 5;
@@ -502,6 +553,9 @@ module control (
 			DMemRead = 0;
 			MuxAddress = 0;
 			next_state = 34;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
 		if(state == 34) begin
 			LoadMDR = 1;

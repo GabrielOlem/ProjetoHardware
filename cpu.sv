@@ -37,22 +37,21 @@ module cpu(input logic clk, input logic reset);
 	logic [1:0]selDataMem;
 	logic [63:0]minion;
 	logic [63:0]EPC;
-	logic noOpcode;
 	logic [2:0]PcSource;
 	logic [63:0]NewPC;
 	logic [63:0]enderecoMemoria;
 	logic [2:0]MuxAddress;
 	logic [3:0]memSel;
-
-	control controle(.memSel(memSel), .MuxAddress(MuxAddress), .noOpcode(noOpcode), .selMuxMem(selMuxMem), .selDataMem(selDataMem), .HistSel(HistSel), .pcWriteCondBge(pcWriteCondBge), .pcWriteCondBlt(pcWriteCondBlt), .SeletorShift(SeletorShift), .pcWriteCondBne(pcWriteCondBne), .extensorSignal(extensorSignal), .PCWriteCond(PCWriteCond), .Instruction(saidaInstruction), .AluOutWrite(AluOutWrite), .clk(clk), .reset(reset), .pcWrite(pcWrite), .pcSource(PcSource), .MuxDataSel(MuxDataSel), .Mux4Sel(Mux4Sel), .ALUOp(selector), .MuxAlu1Sel(MuxAlu1Sel), .Load_ir(IRWrite), .regWrite(RegWrite), .regAWrite(regAWrite), .regBWrite(regBWrite), .DMemRead(wrDataMem), .IMemRead(wrInstMem), .LoadMDR(LoadMDR) );
+	logic Overflow;
+	
+	control controle(.Overflow(Overflow), .memSel(memSel), .MuxAddress(MuxAddress), .noOpcode(noOpcode), .selMuxMem(selMuxMem), .selDataMem(selDataMem), .HistSel(HistSel), .pcWriteCondBge(pcWriteCondBge), .pcWriteCondBlt(pcWriteCondBlt), .SeletorShift(SeletorShift), .pcWriteCondBne(pcWriteCondBne), .extensorSignal(extensorSignal), .PCWriteCond(PCWriteCond), .Instruction(saidaInstruction), .AluOutWrite(AluOutWrite), .clk(clk), .reset(reset), .pcWrite(pcWrite), .pcSource(PcSource), .MuxDataSel(MuxDataSel), .Mux4Sel(Mux4Sel), .ALUOp(selector), .MuxAlu1Sel(MuxAlu1Sel), .Load_ir(IRWrite), .regWrite(RegWrite), .regAWrite(regAWrite), .regBWrite(regBWrite), .DMemRead(wrDataMem), .IMemRead(wrInstMem), .LoadMDR(LoadMDR) );
 
 	register pcz(.clk(clk), .reset(reset), .regWrite(f2), .DadoIn(saidaMuxPc), .DadoOut(PC));
 	register A(.clk(clk), .reset(reset), .regWrite(regAWrite), .DadoIn(regAIn), .DadoOut(registradorA));
 	register B(.clk(clk), .reset(reset), .regWrite(regBWrite), .DadoIn(regBIn), .DadoOut(registradorB));
 	register SaidaAlu(.clk(clk), .reset(reset), .regWrite(AluOutWrite), .DadoIn(Alu), .DadoOut(AluOut));
 	register memdataregister(.clk(clk), .reset(reset), .regWrite(LoadMDR), .DadoIn(saidaMemoria), .DadoOut(MDR));
-	register epc(.clk(clk), .reset(reset), .regWrite(f6), .DadoIn(Alu), .DadoOut(EPC));
-	or or3(f6, Overflow, noOpcode);
+	register epc(.clk(clk), .reset(reset), .regWrite(noOpcode), .DadoIn(Alu), .DadoOut(EPC));
 
 	mux4 muxmemoria(.fi(enderecoMemoria), .a(Alu), .b(64'd254), .c(64'd255), .sel(MuxAddress));
 	mux4 MuxMem(.fi(WriteDataMem), .a(minion), .b(registradorB), .sel(selMuxMem));

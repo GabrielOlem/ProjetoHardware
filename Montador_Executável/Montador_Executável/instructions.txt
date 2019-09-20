@@ -1,9 +1,7 @@
-lui x2,20
-addi x2,x2,1
-addi x3,x0,8
-sd x2,0(x3)
-sh x2,8(x3)
-sb x2,16(x3)
-ld x5,0(x3)
-ld x6,8(x3)
-ld x7,16(x3)
+addi x1,x0,2
+addi x2,x0,-4
+add x2,x1,x2
+sd x2,1(x1)
+add x2,x1,x2
+sd x2,1(x1)
+ld x2,1(x1)

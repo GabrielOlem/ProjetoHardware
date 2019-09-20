@@ -12,5 +12,17 @@ add wave -position end  sim:/teste/reset
 add wave -position end  -radix decimal sim:/teste/pczinho/PC
 add wave -position end  -radix unsigned sim:/teste/pczinho/controle/state
 add wave -position end  -radix decimal sim:/teste/pczinho/bancoRegister/regs
-
+add wave -position end  -radix decimal sim:/teste/pczinho/Alu
+add wave -position end  -radix decimal sim:/teste/pczinho/AluOut
+add wave -position end  -radix decimal sim:/teste/pczinho/DeslocValue
+add wave -position end  sim:/teste/pczinho/MemOutInst
+add wave -position end  -radix decimal sim:/teste/pczinho/WriteDataMem
+add wave -position end  -radix decimal sim:/teste/pczinho/WriteRegister
+add wave -position end  -radix decimal sim:/teste/pczinho/WriteDataReg
+add wave -position end  sim:/teste/pczinho/RegWrite
+add wave -position end  -radix decimal sim:/teste/pczinho/MDR
+add wave -position end  sim:/teste/pczinho/wrDataMem
+add wave -position end  sim:/teste/pczinho/wrInstMem
+add wave -position end  sim:/teste/pczinho/IRWrite
+add wave -position end  -radix decimal sim:/teste/pczinho/EPC
 run 2 us
