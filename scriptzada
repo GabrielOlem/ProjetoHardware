@@ -25,4 +25,4 @@ add wave -position end  sim:/teste/pczinho/wrDataMem
 add wave -position end  sim:/teste/pczinho/wrInstMem
 add wave -position end  sim:/teste/pczinho/IRWrite
 add wave -position end  -radix decimal sim:/teste/pczinho/EPC
-run 2 us
+run 100 us
