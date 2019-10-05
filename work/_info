@@ -7,10 +7,10 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/gme/Desktop/ProjetoHardware
+Z0 dC:/Users/GODZILA/Desktop/ProjetoHardware
 varmario
 Z1 DXx6 sv_std 3 std 0 22 ;edk3;YfCLjCm[Hd=`UGQ2
-Z2 !s110 1570214041
+Z2 !s110 1570318017
 !i10b 1
 !s100 <I]2>F^T>^m3KYI25KTdf3
 IglRm@4PXD9o6e?cW87gJ81
@@ -18,19 +18,19 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 armario_sv_unit
 S1
 R0
-w1568810404
+Z4 w1569550539
 8armario.sv
 Farmario.sv
 L0 1
-Z4 OV;L;10.6d;65
+Z5 OV;L;10.6d;65
 r1
 !s85 0
 31
-Z5 !s108 1570214040.000000
-Z6 !s107 armario.sv|historiador.sv|teste.sv|register.sv|ramOnChip64.v|ramOnChip32.v|mux4.sv|mux.sv|Memoria64.sv|Memoria32.sv|extensor.sv|Deslocamento.sv|cpu.sv|control.sv|bancoReg.sv|
-Z7 !s90 -reportprogress|300|-f|modulizada|
+Z6 !s108 1570318016.000000
+Z7 !s107 armario.sv|historiador.sv|teste.sv|register.sv|ramOnChip64.v|ramOnChip32.v|mux4.sv|mux.sv|Memoria64.sv|Memoria32.sv|extensor.sv|Deslocamento.sv|cpu.sv|control.sv|bancoReg.sv|
+Z8 !s90 -reportprogress|300|-f|modulizada|
 !i113 1
-Z8 tCvgOpt 0
+Z9 tCvgOpt 0
 vbancoReg
 R1
 R2
@@ -41,66 +41,66 @@ R3
 !s105 bancoReg_sv_unit
 S1
 R0
-Z9 w1568807712
+Z10 w1568423062
 8bancoReg.sv
 FbancoReg.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 nbanco@reg
 vcontrol
 R1
 R2
 !i10b 1
-!s100 OO6C3_06EY[anNgmoUBWJ3
-IDOa8Ih^S`gUEzXc]7e[V32
+!s100 c?O9F^l[TTS<hX;X45`I53
+IkHUjD0FLM71WEh:Anc]Nm2
 R3
 !s105 control_sv_unit
 S1
 R0
-w1570214037
+w1570317930
 8control.sv
 Fcontrol.sv
 L0 2
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 vcpu
 R1
 R2
 !i10b 1
-!s100 Q>P^]4fL5a:9Hj=3RVTl51
-I0CBTjKekANTJMlX1[>M<M2
+!s100 4XemG2=JK46fnLZkeD>1[2
+IMfIU86S2@ZBo8I3m<]4UP1
 R3
 !s105 cpu_sv_unit
 S1
 R0
-w1570212116
+w1570317892
 8cpu.sv
 Fcpu.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 vDeslocamento
 R1
 R2
@@ -111,19 +111,19 @@ R3
 !s105 Deslocamento_sv_unit
 S1
 R0
-R9
+R10
 8Deslocamento.sv
 FDeslocamento.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 n@deslocamento
 vextensor
 R1
@@ -135,19 +135,19 @@ R3
 !s105 extensor_sv_unit
 S1
 R0
-Z10 w1570196684
+R4
 8extensor.sv
 Fextensor.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 vhistoriador
 R1
 R2
@@ -158,21 +158,21 @@ R3
 !s105 historiador_sv_unit
 S1
 R0
-R9
+R4
 8historiador.sv
 Fhistoriador.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
-Einstr_reg_risc_v
+!i113 1
 R9
+Einstr_reg_risc_v
+R10
 Z11 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z12 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
@@ -186,7 +186,7 @@ Z15 OV;C;10.6d;65
 32
 R2
 !i10b 1
-Z16 !s108 1570214041.000000
+Z16 !s108 1570318017.000000
 Z17 !s90 -reportprogress|300|-f|vhdlzada|
 !s107 Instr_Reg_RISC_V.vhd|ula64.vhd|
 !i113 1
@@ -218,19 +218,19 @@ R3
 !s105 Memoria32_sv_unit
 S1
 R0
-R9
+R10
 8Memoria32.sv
 FMemoria32.sv
 Z20 L0 26
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 n@memoria32
 vMemoria64
 R1
@@ -242,19 +242,19 @@ R3
 !s105 Memoria64_sv_unit
 S1
 R0
-R9
+R10
 8Memoria64.sv
 FMemoria64.sv
 R20
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 n@memoria64
 vmux
 R1
@@ -266,42 +266,42 @@ R3
 !s105 mux_sv_unit
 S1
 R0
-R9
+R10
 8mux.sv
 Fmux.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 vmux4
 R1
 R2
 !i10b 1
-!s100 ]2?bjoX1J0AhGh`3P;VCU0
-I9Wz[feBPLNVZSRHOJK9e11
+!s100 JX9LR]b37_T^dabLn3<Em0
+I[8dcRi2c025V0WNQQojK?2
 R3
 !s105 mux4_sv_unit
 S1
 R0
-R9
+w1570318009
 8mux4.sv
 Fmux4.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 vramOnChip32
 R2
 !i10b 1
@@ -309,19 +309,19 @@ R2
 IOOLMj_cg_N:74eHXMeQLm3
 R3
 R0
-R9
+R10
 8ramOnChip32.v
 FramOnChip32.v
 Z21 L0 40
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 nram@on@chip32
 vramOnChip64
 R2
@@ -330,19 +330,19 @@ R2
 I5Bnob:67XieXOZhhzR6A22
 R3
 R0
-R9
+R10
 8ramOnChip64.v
 FramOnChip64.v
 R21
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 nram@on@chip64
 vregister
 R1
@@ -354,19 +354,19 @@ R3
 !s105 register_sv_unit
 S1
 R0
-R9
+R10
 8register.sv
 Fregister.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 vteste
 R1
 R2
@@ -377,21 +377,21 @@ R3
 !s105 teste_sv_unit
 S1
 R0
-R9
+R10
 8teste.sv
 Fteste.sv
 L0 3
-R4
+R5
 r1
 !s85 0
 31
-R5
 R6
 R7
-!i113 1
 R8
+!i113 1
+R9
 Eula64
-R10
+R4
 Z22 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R11
 R12

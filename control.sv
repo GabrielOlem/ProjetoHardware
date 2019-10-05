@@ -60,7 +60,7 @@ module control (
 
 			next_state = 46;
 		end
-		if(state == 40) begin //break
+		if(state == 40) begin //break OK
 			next_state = 40;
 		end
 		if(state == 32) begin
@@ -125,7 +125,7 @@ module control (
 			if(Instruction[31:0] == 32'b00000000000100000000000001110011) begin //break
 				next_state = 40;
 			end
-			if(Instruction[31:0] == 32'b00000000000000000000000000010011) begin //nop
+			if(Instruction[31:0] == 32'b00000000000000000000000000010011) begin //nop OK
 				next_state = 1;
 			end
 			if(Instruction[6:0] == 7'b1101111) begin //JAL
@@ -194,7 +194,7 @@ module control (
 				next_state = 13;
 			end
 		end
-		if(state == 3) begin //addi
+		if(state == 3) begin //addi OK
 			extensorSignal = 0;
 			MuxAlu1Sel = 1;
 			Mux4Sel = 2;
@@ -214,7 +214,7 @@ module control (
 			call_state = 1;
 			next_state = 0;
 		end
-		if(state == 4) begin //add
+		if(state == 4) begin //add OK
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			ALUOp = 1;
@@ -233,7 +233,7 @@ module control (
 			call_state = 1;
 			next_state = 0;
 		end
-		if(state == 5) begin //sub
+		if(state == 5) begin //sub OK
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			ALUOp = 2;
@@ -295,7 +295,7 @@ module control (
 				next_state = 8;
 			end
 		end
-		if(state == 8) begin
+		if(state == 8) begin//ld OK
 			MuxDataSel = 1;
 			regWrite = 1;
 
@@ -303,7 +303,7 @@ module control (
 
 			next_state = 0;
 		end
-		if(state == 9) begin //sd
+		if(state == 9) begin //sd OK
 			extensorSignal = 1;
 			selMuxMem = 1;
 			MuxAlu1Sel = 1;
@@ -322,7 +322,7 @@ module control (
 			call_state = 1;
 			next_state = 0;
 		end
-		if(state == 11) begin //beq
+		if(state == 11) begin //beq OK
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			pcSource = 1;
@@ -336,7 +336,7 @@ module control (
 				next_state = 47;
 			end
 		end
-		if(state == 12) begin //bne
+		if(state == 12) begin //bne OK
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			pcSource = 1;
@@ -349,7 +349,7 @@ module control (
 				next_state = 47;
 			end
 		end
-		if(state == 13) begin //lui
+		if(state == 13) begin //lui OK
 			extensorSignal = 3;
 			MuxDataSel = 2;
 			regWrite = 1;
@@ -358,7 +358,7 @@ module control (
 
 			next_state = 0;
 		end
-		if(state == 14) begin //and
+		if(state == 14) begin //and OK
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			
@@ -372,16 +372,10 @@ module control (
 			regWrite = 1;
 			call_state = 1;
 			next_state = 0;
+			
 		end
-		if(state == 15) begin //slt
+		if(state == 15) begin //slt OK
 			ALUOp = 2;
-
-			next_state = 55;
-			if(Overflow) begin
-				next_state = 47;
-			end
-		end
-		if(state == 55) begin
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			MuxDataSel = 3;
@@ -390,17 +384,13 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
-		end
-		if(state == 16) begin //slti
-			extensorSignal = 0;
-			ALUOp = 2;
-
-			next_state = 56;
 			if(Overflow) begin
 				next_state = 47;
 			end
-		end 
-		if(state == 56) begin
+		end
+		if(state == 16) begin //slti OK
+			extensorSignal = 0;
+			ALUOp = 2;
 			MuxAlu1Sel = 1;
 			Mux4Sel = 2;
 			MuxDataSel = 3;
@@ -409,24 +399,22 @@ module control (
 			call_state = 1;
 
 			next_state = 0;
+			if(Overflow) begin
+				next_state = 47;
+			end
 		end
-		if(state == 17) begin //jalr
+		if(state == 17) begin //jalr OK
 			MuxAlu1Sel = 0;
 			ALUOp = 0;
-			AluOutWrite = 1;
-
-			next_state = 57;
-		end
-		if(state == 57) begin
-			MuxDataSel = 0;
+			MuxDataSel = 6;
 			regWrite = 1;
-			extensorSignal = 0;
 
 			call_state = 18;
 			
 			next_state = 0;
 		end
 		if(state == 18) begin
+			extensorSignal = 0;
 			Mux4Sel = 2;
 			MuxAlu1Sel = 1;
 			ALUOp = 1;
@@ -445,14 +433,9 @@ module control (
 
 			next_state = 0;
 		end
-		if(state == 19) begin //srli
+		if(state == 19) begin //srli OK
 			MuxAlu1Sel = 1;
 			ALUOp = 0;
-			AluOutWrite = 1;
-
-			next_state = 59;
-		end
-		if(state == 59) begin
 			SeletorShift = 1;
 			MuxDataSel = 4;
 			regWrite = 1;
@@ -461,14 +444,9 @@ module control (
 			
 			next_state = 0;
 		end
-		if(state == 20) begin //srai
+		if(state == 20) begin //srai OK
 			MuxAlu1Sel = 1;
 			ALUOp = 0;
-			AluOutWrite = 1;
-
-			next_state = 60;
-		end
-		if(state == 60) begin
 			SeletorShift = 2;
 			MuxDataSel = 4;
 			regWrite = 1;
@@ -477,14 +455,9 @@ module control (
 
 			next_state = 0;
 		end
-		if(state == 21) begin //slli
+		if(state == 21) begin //slli OK
 			MuxAlu1Sel = 1;
 			ALUOp = 0;
-			AluOutWrite = 1;
-
-			next_state = 61;
-		end
-		if(state == 61) begin
 			SeletorShift = 0;
 			MuxDataSel = 4;
 			regWrite = 1;
@@ -493,15 +466,10 @@ module control (
 			
 			next_state = 0;
 		end
-		if(state == 22) begin //jal
+		if(state == 22) begin //jal OK
 			MuxAlu1Sel = 0;
 			ALUOp = 0;
-			AluOutWrite = 1;
-
-			next_state = 62;
-		end
-		if(state == 62) begin
-			MuxDataSel = 0;
+			MuxDataSel = 6;
 			regWrite = 1;
 
 			next_state = 23;
@@ -520,14 +488,14 @@ module control (
 			end
 		end
 		if(state == 65) begin
-			pcSource = 0;
+			pcSource = 1;
 			pcWrite = 1;
 
 			call_state = 1;
 			
 			next_state = 0;
 		end
-		if(state == 24) begin //bge
+		if(state == 24) begin //bge OK
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			ALUOp = 2;
@@ -542,7 +510,7 @@ module control (
 				next_state = 47;
 			end
 		end
-		if(state == 25) begin //blt
+		if(state == 25) begin //blt OK
 			MuxAlu1Sel = 1;
 			Mux4Sel = 0;
 			ALUOp = 2;
@@ -557,7 +525,7 @@ module control (
 				next_state = 47;
 			end
 		end
-		if(state == 26) begin //lb
+		if(state == 26) begin //lb OK
 			MuxDataSel = 5;
 			regWrite = 1;
 			HistSel = 0;
@@ -566,7 +534,7 @@ module control (
 
 			next_state = 0;
 		end
-		if(state == 27) begin //lh
+		if(state == 27) begin //lh OK
 			MuxDataSel = 5;
 			regWrite = 1;
 			HistSel = 1;
@@ -575,7 +543,7 @@ module control (
 
 			next_state = 0;
 		end
-		if(state == 28) begin //lw
+		if(state == 28) begin //lw OK
 			MuxDataSel = 5;
 			regWrite = 1;
 			HistSel = 2;
@@ -584,7 +552,7 @@ module control (
 
 			next_state = 0;
 		end
-		if(state == 29) begin //lbu
+		if(state == 29) begin //lbu OK
 			MuxDataSel = 5;
 			regWrite = 1;
 			HistSel = 3;
@@ -593,7 +561,7 @@ module control (
 
 			next_state = 0;
 		end
-		if(state == 30) begin //lhu
+		if(state == 30) begin //lhu OK
 			MuxDataSel = 5;
 			regWrite = 1;
 			HistSel = 4;
@@ -602,7 +570,7 @@ module control (
 
 			next_state = 0;
 		end
-		if(state == 31) begin //lwu
+		if(state == 31) begin //lwu OK
 			MuxDataSel = 5;
 			regWrite = 1;
 			HistSel = 5;
@@ -640,7 +608,7 @@ module control (
 				next_state = 37;
 			end
 		end
-		if(state == 35) begin //SW
+		if(state == 35) begin //SW OK
 			selDataMem = 0;
 			selMuxMem = 0;
 			DMemRead = 1;
@@ -649,7 +617,7 @@ module control (
 
 			next_state = 0;
 		end
-		if(state == 36) begin //SH
+		if(state == 36) begin //SH OK
 			selDataMem = 1;
 			selMuxMem = 0;
 			DMemRead = 1;
@@ -658,7 +626,7 @@ module control (
 			
 			next_state = 0;
 		end
-		if(state == 37) begin //SB
+		if(state == 37) begin //SB OK
 			selDataMem = 2;
 			selMuxMem = 0;
 			DMemRead = 1;

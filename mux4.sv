@@ -1,4 +1,4 @@
-module mux4(output logic [63:0]fi, input logic [63:0]a, logic [63:0]b, logic [63:0]c, logic [63:0]d, logic [63:0]e, logic[63:0]f, logic [2:0] sel);
+module mux4(output logic [63:0]fi, input logic [63:0]a, logic [63:0]b, logic [63:0]c, logic [63:0]d, logic [63:0]e, logic[63:0]f, logic[63:0]g, logic [2:0] sel);
 	always_comb begin
 		if(sel == 0)begin
 			fi = a;
@@ -17,6 +17,9 @@ module mux4(output logic [63:0]fi, input logic [63:0]a, logic [63:0]b, logic [63
 		end
 		if(sel == 5)begin
 			fi = f;
+		end
+		if(sel == 6)begin
+			fi = g;
 		end
 	end
 endmodule
