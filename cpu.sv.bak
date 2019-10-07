@@ -1,54 +1,81 @@
 module cpu(input logic clk, input logic reset);
-	logic [63:0]pcOut;
-	logic [63:0]AluResult;
+	logic [63:0]PC;
+	logic [63:0]Alu;
 	logic [63:0]registradorA;
 	logic [63:0]registradorB;
+	logic [63:0]WriteDataMem;
 	logic [63:0]regAIn;
 	logic [63:0]regBIn;
 	logic [63:0]AluOut;
-	logic [63:0]RegMemoria;
-	logic [63:0]saidaMuxData;
+	logic [63:0]MDR;
+	logic [63:0]WriteDataReg;
 	logic [63:0]Entrada1Alu;
 	logic [63:0]Entrada2Alu;
-	logic [1:0]Mux4Sel;
+	logic [2:0]Mux4Sel;
+	logic [2:0]MuxDataSel;
+	logic [2:0]selMuxMem;
 
 	logic [63:0]saidaMuxPc;
 	logic [63:0]entradaShift;
-	logic [63:0]saidaShift;
+	logic [63:0]DeslocValue;
 	logic [2:0]selector;
 	logic [31:0]raddress;
 	logic [31:0]waddress;
 	logic [31:0]data;
-	logic [31:0]q;
+	logic [31:0]MemOutInst;
 	logic [4:0]saida1;
 	logic [4:0]saida2;
-	logic [4:0]saida3;
+	logic [4:0]WriteRegister;
 	logic [6:0]opCode;
 	logic [31:0]saidaInstruction;
 	logic [63:0]saidaMemoria;
-	
-	control controle(.PCWriteCond(PCWriteCond), .OpCode(OpCode), .AluOutWrite(AluOutWrite), .clk(clk), .reset(reset), .pcWrite(pcWrite), .pcSource(PcSource), .MuxDataSel(MuxDataSel), .Mux4Sel(Mux4Sel), .ALUOp(selector), .MuxAlu1Sel(MuxAlu1Sel), .Load_ir(load_ir), .regWrite(regWrite), .regAWrite(regAWrite), .regBWrite(regBWrite), .DMemRead(DMemRead), .IMemRead(IMemRead), .LoadMDR(LoadMDR) );
+	logic [3:0]extensorSignal;
+	logic [1:0]SeletorShift;
+	logic [63:0]saidaShift2;
+	logic [63:0]Historiado;
+	logic [4:0]HistSel;
+	logic [1:0]selDataMem;
+	logic [63:0]minion;
+	logic [63:0]EPC;
+	logic [2:0]PcSource;
+	logic [63:0]NewPC;
+	logic [63:0]enderecoMemoria;
+	logic [2:0]MuxAddress;
+	logic [3:0]memSel;
+	logic Overflow;
+	control controle(.Overflow(Overflow), .memSel(memSel), .MuxAddress(MuxAddress), .noOpcode(noOpcode), .selMuxMem(selMuxMem), .selDataMem(selDataMem), .HistSel(HistSel), .pcWriteCondBge(pcWriteCondBge), .pcWriteCondBlt(pcWriteCondBlt), .SeletorShift(SeletorShift), .pcWriteCondBne(pcWriteCondBne), .extensorSignal(extensorSignal), .PCWriteCond(PCWriteCond), .Instruction(saidaInstruction), .AluOutWrite(AluOutWrite), .clk(clk), .reset(reset), .pcWrite(pcWrite), .pcSource(PcSource), .MuxDataSel(MuxDataSel), .Mux4Sel(Mux4Sel), .ALUOp(selector), .MuxAlu1Sel(MuxAlu1Sel), .Load_ir(IRWrite), .regWrite(RegWrite), .regAWrite(regAWrite), .regBWrite(regBWrite), .DMemRead(wrDataMem), .IMemRead(wrInstMem), .LoadMDR(LoadMDR) );
 
-	register pc(.clk(clk), .reset(reset), .regWrite(pcWrite), .DadoIn(AluResult), .DadoOut(pcOut));
+	register pcz(.clk(clk), .reset(reset), .regWrite(f2), .DadoIn(saidaMuxPc), .DadoOut(PC));
 	register A(.clk(clk), .reset(reset), .regWrite(regAWrite), .DadoIn(regAIn), .DadoOut(registradorA));
 	register B(.clk(clk), .reset(reset), .regWrite(regBWrite), .DadoIn(regBIn), .DadoOut(registradorB));
-	register SaidaAlu(.clk(clk), .reset(reset), .regWrite(AluOutWrite), .DadoIn(AluResult), .DadoOut(AluOut));
-	register memdataregister(.clk(clk), .reset(reset), .regWrite(LoadMDR), .DadoIn(saidaMemoria), .DadoOut(RegMemoria));
-	
-	mux escreveData(.f(saidaMuxData), .a(AluOut), .b(RegMemoria), .sel(MuxDataSel));
-	mux MuxAlu1(.f(Entrada1Alu), .a(pcOut), .b(registradorA), .sel(MuxAlu1Sel));
-	mux4 MuxAlu2(.f(Entrada2Alu), .a(registradorB), .b(64'd4), .c(entradaShift), .d(saidaShift), .sel(Mux4Sel));
-	mux MuxPC(.f(saidaMuxPc), .a(AluResult), .b(AluOut), .sel(PcSource));
-	
-	Ula64 alu(.A(Entrada1Alu), .B(Entrada2Alu), .Seletor(selector), .S(AluResult);
-	
-	extensor estende(.entrada(saidaInstruction), .saida(entradaShift));
-	Deslocamento shift(.Shift(2'b00), .Entrada(entradaShift), .N(6'd1), .Saida(saidaShift));
-	
-	Memoria32 meminst(.raddress(pcOut), .waddress(waddress), .Clk(clk), .Datain(data), .Dataout(q), .Wr(IMemRead));
-	Memoria64 memdata(.Clk(clk), .raddress(AluOut), .waddress(AluOut), .Datain(registradorB), .Dataout(saidaMemoria), .Wr(DMemRead));
+	register SaidaAlu(.clk(clk), .reset(reset), .regWrite(AluOutWrite), .DadoIn(Alu), .DadoOut(AluOut));
+	register memdataregister(.clk(clk), .reset(reset), .regWrite(LoadMDR), .DadoIn(saidaMemoria), .DadoOut(MDR));
+	register epc(.clk(clk), .reset(reset), .regWrite(noOpcode), .DadoIn(Alu), .DadoOut(EPC));
 
-	Instr_Reg_RISC_V reginst(.Clk(clk), .Reset(reset), .Load_ir(load_ir), .Entrada(q), .Instr19_15(saida1), .Instr24_20(saida2), .Instr11_7(saida3), .Instr6_0(opCode), .Instr31_0(saidaInstruction));
+	mux4 muxmemoria(.fi(enderecoMemoria), .a(AluOut), .b(64'd254), .c(64'd255), .sel(MuxAddress));
+	mux4 MuxMem(.fi(WriteDataMem), .a(minion), .b(registradorB), .sel(selMuxMem));
+	mux4 escreveData(.fi(WriteDataReg), .a(AluOut), .b(MDR), .c(entradaShift), .d({63'b0, Alu[63]}), .e(saidaShift2), .f(Historiado), .g(Alu), .sel(MuxDataSel));
+	mux MuxAlu1(.f(Entrada1Alu), .a(PC), .b(registradorA), .sel(MuxAlu1Sel));
+	mux4 MuxAlu2(.fi(Entrada2Alu), .a(registradorB), .b(64'd4), .c(entradaShift), .d(DeslocValue), .sel(Mux4Sel));
+	mux4 MuxPC(.fi(saidaMuxPc), .a(Alu), .b(AluOut), .c(NewPC), .sel(PcSource));
+	and and1(f1, zero, PCWriteCond);
+	and and2(f3, ~zero, pcWriteCondBne);
+	NewPC = {48'b0, saidaMemoria[7:0]};
+	and and3(f4, ~Alu[31], pcWriteCondBge);
+	and and4(f5, Alu[31], pcWriteCondBlt);
 
-	bancoReg bancoRegister(.clock(clk), .reset(reset), .regreader1(saida1), .regreader2(saida2), .regwriteaddress(saida3), .write(regWrite), .dataout1(regAIn), .dataout2(regBIn), .datain(saidaMuxData));
+	or or2(f2, f1, f3, f4, f5, pcWrite);
+
+	Ula64 alu(.A(Entrada1Alu), .B(Entrada2Alu), .Seletor(selector), .S(Alu), .z(zero), .Overflow(Overflow));
+
+	historiador historia(.entrada(MDR), .saida(Historiado), .sel(HistSel));
+	extensor estende(.entrada(saidaInstruction), .saida(entradaShift), .sel(extensorSignal));
+	Deslocamento shift(.Shift(2'b00), .Entrada(entradaShift), .N(6'd1), .Saida(DeslocValue));
+	Deslocamento shift2(.Shift(SeletorShift), .Entrada(Alu), .N(saidaInstruction[25:20]), .Saida(saidaShift2));
+	Memoria32 meminst(.raddress(PC), .waddress(waddress), .Clk(clk), .Datain(data), .Dataout(MemOutInst), .Wr(wrInstMem));
+	Memoria64 memdata(.Clk(clk), .raddress(enderecoMemoria), .waddress(enderecoMemoria), .Datain(WriteDataMem), .Dataout(saidaMemoria), .Wr(wrDataMem));
+
+	Instr_Reg_RISC_V reginst(.Clk(clk), .Reset(reset), .Load_ir(IRWrite), .Entrada(MemOutInst), .Instr19_15(saida1), .Instr24_20(saida2), .Instr11_7(WriteRegister), .Instr6_0(opCode), .Instr31_0(saidaInstruction));
+	armario guardaroupa(.rs2(registradorB), .MemData(MDR), .guardado(minion), .sel(selDataMem));
+	bancoReg bancoRegister(.clock(clk), .reset(reset), .regreader1(saida1), .regreader2(saida2), .regwriteaddress(WriteRegister), .write(RegWrite), .dataout1(regAIn), .dataout2(regBIn), .datain(WriteDataReg));
 endmodule

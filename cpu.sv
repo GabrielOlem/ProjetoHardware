@@ -43,7 +43,6 @@ module cpu(input logic clk, input logic reset);
 	logic [2:0]MuxAddress;
 	logic [3:0]memSel;
 	logic Overflow;
-	
 	control controle(.Overflow(Overflow), .memSel(memSel), .MuxAddress(MuxAddress), .noOpcode(noOpcode), .selMuxMem(selMuxMem), .selDataMem(selDataMem), .HistSel(HistSel), .pcWriteCondBge(pcWriteCondBge), .pcWriteCondBlt(pcWriteCondBlt), .SeletorShift(SeletorShift), .pcWriteCondBne(pcWriteCondBne), .extensorSignal(extensorSignal), .PCWriteCond(PCWriteCond), .Instruction(saidaInstruction), .AluOutWrite(AluOutWrite), .clk(clk), .reset(reset), .pcWrite(pcWrite), .pcSource(PcSource), .MuxDataSel(MuxDataSel), .Mux4Sel(Mux4Sel), .ALUOp(selector), .MuxAlu1Sel(MuxAlu1Sel), .Load_ir(IRWrite), .regWrite(RegWrite), .regAWrite(regAWrite), .regBWrite(regBWrite), .DMemRead(wrDataMem), .IMemRead(wrInstMem), .LoadMDR(LoadMDR) );
 
 	register pcz(.clk(clk), .reset(reset), .regWrite(f2), .DadoIn(saidaMuxPc), .DadoOut(PC));
@@ -61,7 +60,7 @@ module cpu(input logic clk, input logic reset);
 	mux4 MuxPC(.fi(saidaMuxPc), .a(Alu), .b(AluOut), .c(NewPC), .sel(PcSource));
 	and and1(f1, zero, PCWriteCond);
 	and and2(f3, ~zero, pcWriteCondBne);
-
+	assign NewPC = {48'b0, saidaMemoria[7:0]};
 	and and3(f4, ~Alu[31], pcWriteCondBge);
 	and and4(f5, Alu[31], pcWriteCondBlt);
 
@@ -71,7 +70,6 @@ module cpu(input logic clk, input logic reset);
 
 	historiador historia(.entrada(MDR), .saida(Historiado), .sel(HistSel));
 	extensor estende(.entrada(saidaInstruction), .saida(entradaShift), .sel(extensorSignal));
-	extensor memoria(.entrada(saidaMemoria), .saida(NewPC), .sel(memSel));
 	Deslocamento shift(.Shift(2'b00), .Entrada(entradaShift), .N(6'd1), .Saida(DeslocValue));
 	Deslocamento shift2(.Shift(SeletorShift), .Entrada(Alu), .N(saidaInstruction[25:20]), .Saida(saidaShift2));
 	Memoria32 meminst(.raddress(PC), .waddress(waddress), .Clk(clk), .Datain(data), .Dataout(MemOutInst), .Wr(wrInstMem));

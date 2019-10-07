@@ -36,7 +36,6 @@ module control (
 
 			MuxAddress = 1;
 			DMemRead = 0;
-			memSel = 5;
 			
 			next_state = 46;
 		end
@@ -56,7 +55,6 @@ module control (
 
 			MuxAddress = 2;
 			DMemRead = 0;
-			memSel = 5;
 
 			next_state = 46;
 		end
