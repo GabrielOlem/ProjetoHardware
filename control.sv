@@ -220,16 +220,10 @@ module control (
 
 			
 
-			next_state = 49;
+			next_state = 48;
 			if(Overflow) begin
 				next_state = 47;
 			end
-		end
-		if(state == 49) begin
-			MuxDataSel = 0;
-			regWrite = 1;
-			call_state = 1;
-			next_state = 0;
 		end
 		if(state == 5) begin //sub OK
 			MuxAlu1Sel = 1;
@@ -239,16 +233,10 @@ module control (
 
 			
 
-			next_state = 50;
+			next_state = 48;
 			if(Overflow) begin
 				next_state = 47;
 			end
-		end
-		if(state == 50) begin
-			MuxDataSel = 0;
-			regWrite = 1;
-			call_state = 1;
-			next_state = 0;
 		end
 		if(state == 6) begin //load
 			extensorSignal = 0;
@@ -363,14 +351,7 @@ module control (
 			ALUOp = 3;
 			AluOutWrite = 1;
 
-			next_state = 54;
-		end
-		if(state == 54) begin
-			MuxDataSel = 0;
-			regWrite = 1;
-			call_state = 1;
-			next_state = 0;
-			
+			next_state = 48;
 		end
 		if(state == 15) begin //slt OK
 			ALUOp = 2;
