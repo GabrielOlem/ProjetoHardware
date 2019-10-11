@@ -61,8 +61,8 @@ module cpu(input logic clk, input logic reset);
 	and and1(f1, zero, PCWriteCond);
 	and and2(f3, ~zero, pcWriteCondBne);
 	assign NewPC = {48'b0, saidaMemoria[7:0]};
-	and and3(f4, ~Alu[31], pcWriteCondBge);
-	and and4(f5, Alu[31], pcWriteCondBlt);
+	and and3(f4, ~Alu[63], pcWriteCondBge);
+	and and4(f5, Alu[63], pcWriteCondBlt);
 
 	or or2(f2, f1, f3, f4, f5, pcWrite);
 
