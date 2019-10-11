@@ -123,13 +123,13 @@ module control (
 			if(Instruction[31:0] == 32'b00000000000100000000000001110011) begin //break
 				next_state = 40;
 			end
-			if(Instruction[31:0] == 32'b00000000000000000000000000010011) begin //nop OK
+			else if(Instruction[31:0] == 32'b00000000000000000000000000010011) begin //nop OK
 				next_state = 1;
 			end
-			if(Instruction[6:0] == 7'b1101111) begin //JAL
+			else if(Instruction[6:0] == 7'b1101111) begin //JAL
 				next_state = 22;
 			end
-			if(Instruction[6:0] == 7'b0010011) begin 
+			else if(Instruction[6:0] == 7'b0010011) begin 
 				if(Instruction[14:12] == 3'b000) begin //ADDI
 					next_state = 3;
 				end
@@ -146,7 +146,7 @@ module control (
 					next_state = 21;
 				end
 			end
-			if(Instruction[6:0] == 7'b0110011) begin //Tipo R
+			else if(Instruction[6:0] == 7'b0110011) begin //Tipo R
 				if(Instruction[31:25] == 7'b0000000 && Instruction[14:12] == 3'b000) begin //ADD
 					next_state = 4;
 				end
@@ -160,21 +160,21 @@ module control (
 					next_state = 15;
 				end
 			end
-			if(Instruction[6:0] == 7'b0000011) begin //Load
+			else if(Instruction[6:0] == 7'b0000011) begin //Load
 				next_state = 6;
 			end
-			if(Instruction[6:0] == 7'b0100011) begin //Store
+			else if(Instruction[6:0] == 7'b0100011) begin //Store
 				next_state = 33;
 				if(Instruction[14:12] == 3'b111) begin //SD
 					next_state = 9;
 				end
 			end
-			if(Instruction[6:0] == 7'b1100011) begin //BEQ
+			else if(Instruction[6:0] == 7'b1100011) begin //BEQ
 				if(Instruction[14:12] == 3'b000) begin
 					next_state = 11;
 				end
 			end
-			if(Instruction[6:0] == 7'b1100111) begin //BNE
+			else if(Instruction[6:0] == 7'b1100111) begin //BNE
 				if(Instruction[14:12] == 3'b100) begin //BLT
 					next_state = 25;
 				end
@@ -188,7 +188,7 @@ module control (
 					next_state = 17;
 				end
 			end
-			if(Instruction[6:0] == 7'b0110111) begin //LUI
+			else if(Instruction[6:0] == 7'b0110111) begin //LUI
 				next_state = 13;
 			end
 		end

@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/gme/Desktop/ProjetoHardware
 varmario
 Z1 DXx6 sv_std 3 std 0 22 ;edk3;YfCLjCm[Hd=`UGQ2
-Z2 !s110 1570454730
+Z2 !s110 1570815112
 !i10b 1
 !s100 <I]2>F^T>^m3KYI25KTdf3
 IglRm@4PXD9o6e?cW87gJ81
@@ -18,7 +18,7 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 armario_sv_unit
 S1
 R0
-Z4 w1570453796
+Z4 w1570810157
 8armario.sv
 Farmario.sv
 L0 1
@@ -26,7 +26,7 @@ Z5 OV;L;10.6d;65
 r1
 !s85 0
 31
-Z6 !s108 1570454730.000000
+Z6 !s108 1570815112.000000
 Z7 !s107 armario.sv|historiador.sv|teste.sv|register.sv|ramOnChip64.v|ramOnChip32.v|mux4.sv|mux.sv|Memoria64.sv|Memoria32.sv|extensor.sv|Deslocamento.sv|cpu.sv|control.sv|bancoReg.sv|
 Z8 !s90 -reportprogress|300|-f|modulizada|
 !i113 1
@@ -59,13 +59,13 @@ vcontrol
 R1
 R2
 !i10b 1
-!s100 3IFZAJKE9UL659CZ?>SB;0
-IgY:<kd;44Enz]NR4iVH`<1
+!s100 3h^jWTXc6md@1m`KFkL6B0
+In_XWT<^z3j=E?:JE4=Xa70
 R3
 !s105 control_sv_unit
 S1
 R0
-w1570454403
+w1570814985
 8control.sv
 Fcontrol.sv
 L0 2
@@ -82,13 +82,13 @@ vcpu
 R1
 R2
 !i10b 1
-!s100 ?cjeIN;]=i?4N@QTc^=Jd3
-I2j8;Xhj:nEcWe:O;IEFzS2
+!s100 AOXXgP8AhV@NLhc2>FMzJ1
+I0?k:mU9=W`g64j[WPW7Tk1
 R3
 !s105 cpu_sv_unit
 S1
 R0
-w1570454727
+R4
 8cpu.sv
 Fcpu.sv
 L0 1
